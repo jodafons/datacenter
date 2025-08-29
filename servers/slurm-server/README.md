@@ -14,10 +14,25 @@ After reboot,
 
 ```
 source 02_install_base.sh
+```
+
+Before proceeding, verify that you have the Slurm binaries located in the `/mnt/market_place/slurm_build` folder. If the binaries are missing, you must compile them by running the provided script.
+
+```
+# in scripts/ folder
+source compile.sh
+```
+
+If you have the binaries, you can skip this step and continue with the next installation script. With the binaries ready, proceed with the main installation script to set up the Slurm controller.
+
+```
 source 03_install_slurm.sh
 ```
 
-Optional:
+### Optional:
+
+To install a web-based interface for monitoring and managing your Slurm cluster, run the following script.
+
 ```
 source 04_install_slurmweb.sh
 ```
