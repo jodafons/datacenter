@@ -3,12 +3,13 @@
 
 After install the OS debian, follow the steps below to prepare the base node.
 
+
 ## Setup network (stage 1):
 
 This script as `sudo` and it will setup the network configuration to `10.1.1.10`. Just tip:
 
 ```
-source setup_network.sh
+source 01_setup_network.sh
 ```
 
 ## Install NFS, Kerberos and LDAP (stage 2):
@@ -16,7 +17,7 @@ source setup_network.sh
 To install NFS and kerberus tip:
 
 ```
-source install_base.sh
+source 02_install_base.sh
 ```
 
 Some Q&A must be filled:
@@ -64,7 +65,7 @@ If everything is fine, now let´s move to the next stage
 To install `slurm`, tip this command:
 
 ```
-source install_slurm.sh
+source 03_install_slurm.sh
 ```
 
 ### Health check:
@@ -83,7 +84,7 @@ if you got the slurm configuratio, just move to the next stage. Just ensure that
 Just tip as `sudo`:
 
 ```
-source install_singularity.sh
+source 04_install_singularity.sh
 ```
 
 ### Health check:
@@ -144,57 +145,6 @@ Q&A options:
 - Overwrite cuda link: `Yes`
 
 To check if cuda is ready, tip `nvcc --version`.
-
-
-
-
-###
-
-1 - Install
-2 - English
-3 - Other
-4 - South America
-5 - Brazil
-6 - United States
-7 - American English
-8 - Hostname: slurm-worker
-9 - Domain: lps.ufrj.br
-10 - No passoword for root (just continue)
-11 - No password for root (continue again)
-12 - full name: cluster
-13 - user name: cluster
-14 - master password (click in the box to be sure about of the pasword)
-15 - retype the passoword again
-16 - configure clock: Sao paulo
-17 Partition disk configuration:
-17.1 select manual option
-17.2 select the HARDDISK name option
-17.3 Create new empty partition table on this device? Yes
-17.4 Select the FREE SPACE option 
-17.5 create a new partition
-17.6  new partition size: just continue with the total size
-17.7 Type for the new partition: primary
-17.8 finally, select "don sessint up the partition"
-17.9 finish partitioning and write changes to disk
-17.10 do you want to retrn to the partitoning menu? No
-17.11 Write the changes to disk? yes
-
-18 Configure the package manager
-18.1 Scan extra installation media? No
-18.2 Debian archive mirror country: brazil
-18.3: select: deb.debian.org
-18.4: HTTP proxy: blank
-
-19 Participate in the package usage survey? No
-20 Choose software to install: selec only SSH server and standard system utilities (last two options)
-
-21 Install the GRUP boot loader to your primary drive? Yes
-22 select the device boot loader intallation: usually /dev/sda (second option)
-
-23 click in contine to complete the installation, the macine will reboot
-
-
-
 
 
 
