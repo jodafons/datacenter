@@ -1,0 +1,29 @@
+version: "3"
+services:
+  app:
+    image: "jc21/nginx-proxy-manager:latest"
+    ports:
+      - "80:80"
+      - "8080:81"
+      - "443:443"
+    environment:
+      DB_MYSQL_HOST: "db"
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: "nginxproxymanger"
+      DB_MYSQL_PASSWORD: "56X0wr6eElDLvNlc"
+      DB_MYSQL_NAME: "nginxproxymanger"
+    volumes:
+      - /mnt/market_place/volumes/proxy/data:/data
+      - /mnt/market_place/volumes/proxy/letsencrypt:/etc/letsencrypt
+    restart: unless-stopped
+  db:
+    image: "jc21/mariadb-aria:latest"
+    environment:
+      MYSQL_ROOT_PASSWORD: "56X0wr6eElDLvNlc"
+      MYSQL_DATABASE: "nginxproxymanger"
+      MYSQL_USER: "nginxproxymanger"
+      MYSQL_PASSWORD: "56X0wr6eElDLvNlc"
+    volumes:
+      - /mnt/market_place/volumes/proxy/data/mysql:/var/lib/mysql
+    restart: unless-stopped
+
