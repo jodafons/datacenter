@@ -1,3 +1,4 @@
 ansible
-loguro 
+loguru 
 rich-argparse
+sphinx
