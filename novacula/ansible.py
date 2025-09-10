@@ -2,24 +2,11 @@ __all__ = ["Command",
            "Playbook"]
 
 
-import os, traceback, json
+import os, traceback
 
-from typing import List, Dict
-from time import sleep
-from pprint import pprint
-from loguru import logger
-from rich_argparse import RichHelpFormatter
+from typing import Dict
+from novacula import get_host_path, get_playbook_path
 
-def get_basepath() -> str:
-    import playbooks
-    return playbooks.__path__[0]
-
-def get_cluster_config() -> Dict:
-    with open(f"{get_basepath()}/templates/cluster.json",'r') as f:
-        return json.load(f)
-
-def get_host_path() -> str:
-    return get_basepath()+"/templates/hosts"
 
 
 class Command:
@@ -39,7 +26,7 @@ class Command:
 class Playbook:
   
     def __init__(self, 
-               host_path : str,
+               host_path : str=get_host_path(),
                dry_run   : bool=False,
                verbose   : bool=False,
                envs      : Dict = {"ANSIBLE_HOST_KEY_CHECKING":"False"}
@@ -73,46 +60,28 @@ class Playbook:
         self.verbose   = verbose
         self.envs      = envs
 
-
-    def ping(self, hosts : str ):
+    def ping_hosts(self, hosts : str ):
         command = f"{self.__preexec} && ansible {hosts} -m ping -v -i {get_host_path()}"
         os.system(command)
 
     def run_shell(self, 
-                  host_group  : str, 
+                  hosts       : str, 
                   command     : Command, 
                   script      : str="shell.yaml"
                 ) -> bool:
-        
-        params = f"description='{command.description}' "
-        params+= f"hosts={host_group} "
-        params+= f"command='{command()}' "
-        return self.run(script, params)
+        params = {
+            "command": command(),
+            "description": command.description,
+        }
+        return self.run(script, hosts, params)
 
-    def run(self, script: str, params: Dict[str,str]) -> bool:
-            """ 
-            Executes an Ansible playbook with the specified script and parameters.
-
-            This method constructs a command to run an Ansible playbook using the 
-            provided script and parameters. It sets up the necessary environment 
-            variables and handles the execution of the command. If verbose mode is 
-            enabled, additional output will be printed.
-
-            Args:
-                script (str): The name of the Ansible playbook script to execute.
-                params (str): The parameters to pass to the Ansible playbook.
-
-            Returns:
-                bool: True if the command was executed successfully, False otherwise.
-
-            Raises:
-                Exception: If there is an error during command execution.
-            """
-            script = f"{get_basepath()}/yaml/{script}"
-            hosts  = get_host_path()
+    def run(self, script: str, hosts : str,  params: Dict[str,str]={}) -> bool:
+           
+            script  = f"{get_playbook_path()}/{script}"
+            params  = {"hosts": hosts, **params}
             preexec = " && ".join([f"export {key}={value}" for key, value in self.envs.items()])
-            params = " ".join([f"{key}={value}" for key, value in params.items()])
-            command = f'{preexec} && ansible-playbook -i {hosts} {script} -e "{params}"'
+            params  = " ".join([f"{key}={value}" for key, value in params.items()])
+            command = f'{preexec} && ansible-playbook -i {self.hosts} {script} -e "{params}"'
             if self.verbose:
                 command += " -vv"
             print(command)

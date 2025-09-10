@@ -1,39 +1,58 @@
+__all__ = ["Cluster"]
 
+import argparse
 
+from time             import sleep
+from typing           import Dict, List
 from novacula.ansible import Playbook, Command
+from novacula         import get_cluster_config, get_master_key, get_argparser_formatter
 
 class Cluster(Playbook):
   
     def __init__(self, 
-                 host_path : str,
-                 cluster             : str,
-                 dry_run             : bool=False,
-                 verbose             : bool=False,
+                 cluster_name : str,
+                 dry_run      : bool=False,
+                 verbose      : bool=False,
                ):
-        Playbook.__init__(self, host_path, dry_run=dry_run, verbose=verbose)
-        self.cluster=cluster
-        conf = get_cluster_config()
-        for key, value in conf["cluster"][cluster].items():
-            setattr(self,key,value)
-      
-      
-    def ping_all(self):
-        self.ping(self.cluster)
+        Playbook.__init__(self, dry_run=dry_run, verbose=verbose)
+        self.cluster_name   = cluster_name
+        self.cluster_config = get_cluster_config()
+
+
+    def cluster(self, key : str) -> str:
+        return self.cluster_config['cluster'][self.cluster_name][key]
+       
+
+    def storages(self) -> List[Dict[str,str]]:
+        storages = self.cluster_config['storage']
+        return [ { "name":name,'server':d['server'],'path':d['path']} for name, d in storages.items()]
+
+
+    def ping(self):
+        self.ping_hosts(self.cluster_name)
 
 
     def run_shell_on_all(self, 
                          command:str
                          ) -> bool:
-        return self.run_shell(self.cluster, command)
+        return self.run_shell(self.cluster_name, command)
+    
+
+    def run_script_on_all(self, script_name : str, params : Dict={}) -> bool:
+        return self.run(script_name, self.cluster_name, params)
   
   
     def run_shell_on_master_host(self, 
-                                 command : str
+                                 command : Command
                                  ) -> bool:
-        return self.run_shell(self.host, command)
+        cluster_master_host = self.cluster("host")
+        return self.run_shell(cluster_master_host, command)
     
-    
-    def reset_cluster(self) -> bool:
+    #
+    # Cluster operations
+    #
+
+    def reset(self) -> bool:
 
         print(f"reset the cluster with name {self.cluster}")
         command = Command("reset nodes...")
@@ -48,83 +67,131 @@ class Cluster(Playbook):
     
     
     def reboot(self) -> bool:
-        return self.run("reboot.yaml", params=f"hosts={self.cluster}")
+        return self.run_script_on_all("reboot.yaml")
     
     
     def create_cluster(self) -> bool:
-        print(f"create cluster into the host {self.host} for cluster {self.cluster}")
+        cluster_master_host = self.cluster("host")
+        print(f"create cluster into the host {cluster_master_host} for cluster {self.cluster_name}")
         command = Command("create cluster...")
-        command+= f"pvecm create {self.cluster} --votes 1"
+        command+= f"pvecm create {self.cluster_name} --votes 1"
         return self.run_shell_on_master_host(command)
 
 
-    def add_nodes(self, master_key : str) -> bool:
+    def create_nodes(self) -> bool:
         print(f"add nodes into the cluster {self.cluster}...")
-        params = f"hosts={self.cluster} ip_address={self.ip_address} master_key='{master_key}'" 
         params = {
-           "hosts"      : self.cluster,
-           "ip_address" : self.ip_address,
-           "master_key" : self.master_key
+           "ip_address" : self.cluster("ip_address"),
+           "master_key" : get_master_key()
         }
-        return self.run("host/add_node.yaml", params)
+        return self.run_script_on_all("host/add_node.yaml", params)
 
 
-  def add_storage(self) -> bool:
-    command = f"pvesm add nfs {{storage_name}} --server {{ip_address}} --export /volume1/proxmox --content iso,backup,images"
-    r    eturn self.run_shell_on_master_host( command, description="add storages...")
+    def create_storage(self, storage : Dict[str,str]) -> bool:
+      storage_name = storage['name']
+      ip_address   = storage['server']
+      path         = storage['path']
+      print(f"add storage {storage_name} into the cluster {self.cluster}...")
+      command = Command("add storages...")
+      command+= f"pvesm add nfs {storage_name} --server {ip_address} --export {path} --content iso,backup,images"
+      return self.run_shell_on_master_host(command)
 
 
-  def configure_nodes(self) -> bool:
-    script_http = "https://raw.githubusercontent.com/jodafons/lps-cluster/refs/heads/main/playbooks/yaml/host/configure_node.py"
-    script_name = script_http.split("/")[-1]
-    command     = f"wget {script_http} && python3 {script_name}"
-    ok = self.run_shell_on_all(command, description="configure gpus passthorug...")
-    if not ok:
-      logger.error("it is not possible to configure nodes...")
-      return False    
-    return self.reboot()
+    def configure_nodes(self) -> bool:
+      script_http = "https://raw.githubusercontent.com/jodafons/lps-cluster/refs/heads/main/playbooks/yaml/host/configure_node.py"
+      script_name = script_http.split("/")[-1]
+      command     = Command("configure nodes...")
+      command    += f"wget {script_http} && python3 {script_name}"
+      ok = self.run_shell_on_all(command)
+      if not ok:
+        print("it is not possible to configure nodes...")
+      return self.reboot() if ok else False
 
+    #
+    # High level operations
+    #
     
-  def destroy(self) -> bool:
-    self.reset_cluster()
-    self.reboot()
+    def destroy(self) -> bool:
+      self.reset()
+      self.reboot()
 
 
-  def create(self, master_key : str) -> bool:
-    logger.info(f"[step 1] resetting all nodes into the cluster {self.cluster}...")
-    ok = self.reset_cluster()
-    if not ok:
-      logger.error(f"[step 1] it is not possible to reset all nodes")
-      return False
+    def create(self) -> bool:
+      print(f"[step 1] resetting all nodes into the cluster {self.cluster}...")
+      ok = self.reset()
+      if not ok:
+        print(f"[step 1] it is not possible to reset all nodes")
+        return False
 
-    logger.info(f"[step 2] reboot all nodes into the cluster {self.cluster}...")
-    ok = self.reboot()
-    if not ok:
-      logger.error(f"[step 2] it is not possible to reboot all nodes")
-      return False
-        
-    sleep(30)
-    logger.info(f"[step 3] create the cluster with name {self.cluster}...")
-    ok = self.create_cluster()
-    if not ok:
-      logger.error(f"[step 3] it is not possible to create the cluster with name {self.cluster}")
-      return False
-          
-    sleep(10)
-    logger.info(f"[step 4] add nodes into the cluster {self.cluster}...")
+      print(f"[step 2] reboot all nodes into the cluster {self.cluster_name}...")
+      ok = self.reboot()
+      if not ok:
+        print(f"[step 2] it is not possible to reboot all nodes")
+        return False
 
-    ok = self.add_nodes(master_key)
-    if not ok:
-      logger.error(f"[step 4] it is not possible to add nodes the cluster {self.cluster}")
-      return False
-    
-    sleep(5)
-    logger.info(f"[step 5] configure all nodes into the cluster {self.cluster}...")
-    ok = self.configure_nodes()
-    if not ok:
-      logger.error(f"[step 5] it is not possible to configure all nodes into the cluster {self.cluster}")
-      return False
-    
-    return True 
+      sleep(30)
+      print(f"[step 3] create the cluster with name {self.cluster_name}...")
+      ok = self.create_cluster()
+      if not ok:
+        print(f"[step 3] it is not possible to create the cluster with name {self.cluster_name}")
+        return False
 
+      sleep(10)
+      print(f"[step 4] add nodes into the cluster {self.cluster_nam}...")
+
+      ok = self.create_nodes()
+      if not ok:
+        print(f"[step 4] it is not possible to add nodes the cluster {self.cluster}")
+        return False
+
+      sleep(5)
+      print(f"[step 5] configure all nodes into the cluster {self.cluster}...")
+      ok = self.configure_nodes()
+      if not ok:
+        print(f"[step 5] it is not possible to configure all nodes into the cluster {self.cluster}")
+        return False
+
+      return True 
+
+
+#
+# Parsers
+#
+
+def common_parser():
+  parser = argparse.ArgumentParser(description = '', add_help = False,  formatter_class=get_argparser_formatter())
+  
+  parser.add_argument('--dry-run', action='store_true', dest='dry_run', required = False,
+                      help = "Set as dry run.")
+  parser.add_argument('-v','--verbose', action='store_true', dest='verbose', required = False, 
+                      help = "Set as verbose.")
+  return parser
+
+def cluster_create_parser():
+  parser = argparse.ArgumentParser(description = '', add_help = False,
+                                   formatter_class=get_argparser_formatter())
+  parser.add_argument('-n','--name', action='store', dest='name', required = True,
+                      help = "The name of the cluster.")
+  return [common_parser(), parser]
+
+def cluster_destroy_parser():
+  parser = argparse.ArgumentParser(description = '', add_help = False,
+                                   formatter_class=get_argparser_formatter())
+  parser.add_argument('-n','--name', action='store', dest='name', required = True,
+                      help = "The name of the cluster.")
+  return [common_parser(), parser]
+
+def cluster_reboot_parser():
+  parser = argparse.ArgumentParser(description = '', add_help = False,
+                                   formatter_class=get_argparser_formatter())
+  parser.add_argument('-n','--name', action='store', dest='name', required = True,
+                      help = "The name of the cluster.")
+  return [common_parser(), parser]
+
+def cluster_ping_parser():
+  parser = argparse.ArgumentParser(description = '', add_help = False,
+                                   formatter_class=get_argparser_formatter())
+  parser.add_argument('-n','--name', action='store', dest='name', required = True,
+                      help = "The name of the cluster.")
+  return [common_parser(),parser]
 

@@ -1,0 +1,9 @@
+---
+- name: Reset all nodes into the cluster
+  hosts: "{{hosts}}"
+  remote_user: root
+  become: yes
+  tasks:
+    - name: Reboot a Linux machine 
+      reboot:
+        reboot_timeout: 1800

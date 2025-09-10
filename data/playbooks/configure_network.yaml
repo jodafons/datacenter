@@ -1,0 +1,25 @@
+---
+- name: execute a script.
+  hosts: "{{hosts}}"
+  remote_user: root
+  become: yes
+  tasks:   
+     - name: Async restart of networking.service 
+       shell: "{{command}}"
+       args:
+        executable: /bin/bash
+       async: 10
+       poll: 0
+    
+     - name: set_fact for the nodes new IP
+       set_fact:
+        ansible_host: "{{ip_address}}"
+   
+     - name: wait_for ssh port access
+       local_action:
+         module: wait_for
+         host: "{{vm_name}}"
+         port: 22
+         delay: 60
+         state: started
+       register: network_responding
