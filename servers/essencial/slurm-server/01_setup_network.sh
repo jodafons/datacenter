@@ -45,6 +45,14 @@ mkdir /mnt/market_place
 echo "10.1.1.202:/volume1/market_place /mnt/market_place nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
 
 
+#mkdir -p /mnt/storage01
+#mkdir -p /mnt/storage02
+#mkdir -p /mnt/storage03
+#echo "10.1.1.202:/volume1 /mnt/storage01 nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+#echo "10.1.1.203:/volume1 /mnt/storage02 nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+#echo "10.1.1.204:/shares /mnt/storage03 nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+
+
 reboot now
 
 

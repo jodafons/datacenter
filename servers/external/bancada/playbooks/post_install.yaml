@@ -1,0 +1,9 @@
+---
+- name: Shell
+  hosts: "bancada"
+  remote_user: root
+  become: yes
+  tasks:
+     - name: "Install extra packages..."
+       ansible.builtin.shell: |
+        cd /mnt/market_place/scripts/lps-cluster/external/bancada && source 05_post_install.sh
