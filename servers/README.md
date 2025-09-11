@@ -1,18 +1,14 @@
-#
+# 🚀 HPC Infrastructure Documentation
 
-## 🚀 HPC Infrastructure Documentation
 This repository contains documentation and installation scripts for our HPC infrastructure. The documentation is organized into logical groups to help you find what you need quickly.
 
 ### ⚙️ Essential Services
 This section contains documentation for core services required for the infrastructure's operation.
 
-[SLURM Server](essencial/slurm-server/README.md): 📝 Instructions for installing and configuring the SLURM workload manager.
-
-[Authenticator Server](essencial/auth-server/README.md): 🛡️ Guide to setting up the authentication server, including Kerberos and LDAP services.
-
-[Login Server](essencial/login-server/README.md): 🖥️ Scripts and documentation for the central login server.
-
-[DNS Server](essencial/login-server/README.md): 🌐 Details on configuring the DNS server for name resolution within the network.
+* [SLURM Server](essencial/slurm-server/README.md): 📝 Instructions for installing and configuring the SLURM workload manager.
+* [Authenticator Server](essencial/auth-server/README.md): 🛡️ Guide to setting up the authentication server, including Kerberos and LDAP services.
+* [Login Server](essencial/login-server/README.md): 🖥️ Scripts and documentation for the central login server.
+* [DNS Server](essencial/login-server/README.md): 🌐 Details on configuring the DNS server for name resolution within the network.
 
 [VPN Server](essencial/vpn-server/README.md): 🔐 Information on setting up the VPN server for secure remote access.
 
