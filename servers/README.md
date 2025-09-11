@@ -1,6 +1,8 @@
 # 🚀 HPC Infrastructure Documentation
 
-This repository contains documentation and installation scripts for our HPC infrastructure. The documentation is organized into logical groups to help you find what you need quickly.
+This repository contains documentation and installation scripts for our HPC [infrastructure](docs/Infrastructure.md). The documentation is organized into logical groups to help you find what you need quickly.
+
+
 
 ## Servers and Nodes:
 
@@ -37,8 +39,6 @@ This section covers the setup and configuration of our compute nodes.
 
 Welcome to the documentation for our lab network! This repository contains guides for setting up and managing key services.
 
-* 💻 Proxmox Installation - A guide to installing and configuring a Proxmox server, including steps for GPU passthrough and cluster management.
-
-* 🐧 Debian Installation - Instructions for setting up a new Debian system.
-
-* 🔑 Account Creation - A step-by-step process for creating new user accounts with LDAP and Kerberos.
+* 💻 [Proxmox Installation](docs/How_to_install_Proxmox.md): A guide to installing and configuring a Proxmox server, including steps for GPU passthrough and cluster management.
+* 🐧 [Debian Installation](docs/How_to_Install_Debian.md): Instructions for setting up a new Debian system.
+* 🔑 [Account Creation](docs/How_to_create_account.md): A step-by-step process for creating new user accounts with LDAP and Kerberos.
