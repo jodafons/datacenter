@@ -27,5 +27,6 @@ This section covers the setup and configuration of our compute nodes.
 * [Bancada Node](nodes/bancada-node/README.md): 🛠️ Documentation for the bancada-node compute machine.
 
 ### 📦 Docker Composes
-Useful [Composes](composes/README.md): 📄 A collection of useful Docker Compose files for various applications, designed to be used on the Docker server.
+
+* Useful [Composes](composes/README.md): 📄 A collection of useful Docker Compose files for various applications, designed to be used on the Docker server.
 
