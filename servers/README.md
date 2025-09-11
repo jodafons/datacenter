@@ -2,6 +2,8 @@
 
 This repository contains documentation and installation scripts for our HPC infrastructure. The documentation is organized into logical groups to help you find what you need quickly.
 
+## Servers and Nodes:
+
 ### ⚙️ Essential Services
 This section contains documentation for core services required for the infrastructure's operation.
 
@@ -29,3 +31,14 @@ This section covers the setup and configuration of our compute nodes.
 
 * Useful [Composes](composes/README.md): 📄 A collection of useful Docker Compose files for various applications, designed to be used on the Docker server.
 
+
+
+## Documents
+
+Welcome to the documentation for our lab network! This repository contains guides for setting up and managing key services.
+
+* 💻 Proxmox Installation - A guide to installing and configuring a Proxmox server, including steps for GPU passthrough and cluster management.
+
+* 🐧 Debian Installation - Instructions for setting up a new Debian system.
+
+* 🔑 Account Creation - A step-by-step process for creating new user accounts with LDAP and Kerberos.
