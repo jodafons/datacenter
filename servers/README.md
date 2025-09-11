@@ -9,8 +9,7 @@ This section contains documentation for core services required for the infrastru
 * [Authenticator Server](essencial/auth-server/README.md): 🛡️ Guide to setting up the authentication server, including Kerberos and LDAP services.
 * [Login Server](essencial/login-server/README.md): 🖥️ Scripts and documentation for the central login server.
 * [DNS Server](essencial/login-server/README.md): 🌐 Details on configuring the DNS server for name resolution within the network.
-
-[VPN Server](essencial/vpn-server/README.md): 🔐 Information on setting up the VPN server for secure remote access.
+* [VPN Server](essencial/vpn-server/README.md): 🔐 Information on setting up the VPN server for secure remote access.
 
 ### 🌐 External Services
 These are services that are accessible from outside the core network or provide external functionality.
