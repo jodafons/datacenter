@@ -4,7 +4,7 @@ This guide provides a detailed, step-by-step walkthrough for installing the Debi
 
 ---
 
-### Installation Steps
+## Installation Steps
 
 1.  **Boot from Installation Media:** Insert your Debian installation media (USB drive or DVD) and boot the machine. Select `Install`.
 
