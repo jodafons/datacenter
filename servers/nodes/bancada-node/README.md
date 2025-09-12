@@ -1,27 +1,26 @@
 
 # Station
 
-Install the latest Operation System such as Ubuntu 22.04.
-Lets start with `geneve` as example.
+Install the latest Operation System such as Ubuntu 22.04. You can download [here](https://drive.google.com/file/d/1veSJFoA0WfP-LOW_2One5Z7XbOOBC26v/view?usp=share_link). Follow the instructions to build a bootable pendrive [here](../../../docs/How_to_create_bootable_pendrive.md)
 
-* Hostname: `geneve`
+Lets start with `bancada01` as example.
+
+* Hostname: `bancada01`
 * Username: `cluster`
 
 ## Network Configuration
 
-First, tip `fconfig` and get the name of the network interface. Example:
+First, run the network configuration script:
 
 
 ```
-source setup_network.sh ens8p 201
+source 01_setup_network.sh [id_of_the_node]
 ```
-
-Where `ens8p` is the name of the network device and `201` is the IP last number (See DNS table).
 
 ## Kerberos, NFS and LDAP:
 
 ```
-source install_base.sh
+source 02_install_base.sh
 ```
 
 
@@ -50,8 +49,8 @@ getent passwd
 ## Install Docker and Singularity (Optional):
 
 ```
-source install_docker.sh (not recomended)
-source install_singularity.sh (Extremelly recomended)
+source 03_install_singularity.sh (Extremelly recomended)
+source 04_install_docker.sh (not recomended)
 ```
 
 
