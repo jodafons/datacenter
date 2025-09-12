@@ -1,6 +1,8 @@
-## Documents
+## Datacenter
 
-Welcome to the documentation for our lab network! This repository contains guides for setting up and managing key services.
+This repository contains all scripts and topology of the Caloba cluster. The Caloba cluster is a High-Performance Computing (HPC) environment based on SLURM, designed to efficiently manage and schedule jobs across multiple nodes, providing users with the resources they need for computational tasks.
 
-* [admin](servers/README.md)
-* [DOC](docs/How_to_use_SLURM.md)
+* [infrastructure installation](servers/README.md)
+* 💻 [Proxmox Installation](docs/How_to_install_Proxmox.md): A guide to installing and configuring a Proxmox server, including steps for GPU passthrough and cluster management.
+* 🐧 [Debian Installation](docs/How_to_Install_Debian.md): Instructions for setting up a new Debian system.
+* 🔑 [Account Creation](docs/How_to_create_account.md): A step-by-step process for creating new user accounts with LDAP and Kerberos.
