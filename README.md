@@ -6,3 +6,4 @@ This repository contains all scripts and topology of the Caloba cluster. The Cal
 * 💻 [Proxmox Installation](docs/How_to_install_Proxmox.md): A guide to installing and configuring a Proxmox server, including steps for GPU passthrough and cluster management.
 * 🐧 [Debian Installation](docs/How_to_Install_Debian.md): Instructions for setting up a new Debian system.
 * 🔑 [Account Creation](docs/How_to_create_account.md): A step-by-step process for creating new user accounts with LDAP and Kerberos.
+* 💾 [Bootable Pendrive](docs/How_to_create_bootable_pendrive.md): Instructions for create a bootable pendrive on Linux or MacOS.
