@@ -182,3 +182,10 @@ To add an NFS storage share to your cluster, follow these steps:
       * **Location**: `/volume1/proxmox`
       * **Content**: Select **Disk**, **ISO**, **backup**, and **snipped**.
 4.  Click **Add** to make the storage available to the entire cluster.
+
+-----
+
+# LPS adminstrator page:
+
+Back to the [main](https://sites.google.com/lps.ufrj.br/infra/início) page!
+
