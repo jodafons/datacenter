@@ -43,8 +43,9 @@ This guide explains the process for creating a new user account on the lab netwo
     sudo kadmin -q "cpw username"
     ```
 
+-----
 
-## LPS adminstrator page:
+# LPS adminstrator page:
 
 Back to the [main](https://sites.google.com/lps.ufrj.br/infra/início) page!
 

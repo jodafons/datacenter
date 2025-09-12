@@ -1,6 +1,6 @@
 # Debian Installation Guide for a Slurm Worker Node
 
-This guide provides a detailed, step-by-step walkthrough for installing the Debian operating system on a new node, specifically configured to function as a Slurm worker. Follow these instructions carefully during the installation process.
+This guide provides a detailed, step-by-step walkthrough for installing the Debian operating system on a new node, specifically configured to function as a Slurm worker. Follow these instructions carefully during the installation process. You can download Debian [here](https://drive.google.com/file/d/1YNPPO5Ssl5tpM_stVRoTBEz2mrpjlqD_/view?usp=share_link)
 
 ---
 
@@ -60,3 +60,11 @@ This guide provides a detailed, step-by-step walkthrough for installing the Debi
     * Click `Continue` to complete the installation. The machine will reboot automatically.
 
 Upon reboot, your Debian OS will be installed and configured as a Slurm worker node.
+
+
+-----
+
+# LPS adminstrator page:
+
+Back to the [main](https://sites.google.com/lps.ufrj.br/infra/início) page!
+

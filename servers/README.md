@@ -34,11 +34,3 @@ This section covers the setup and configuration of our compute nodes.
 * Useful [Composes](composes/README.md): 📄 A collection of useful Docker Compose files for various applications, designed to be used on the Docker server.
 
 
-
-## Documents
-
-Welcome to the documentation for our lab network! This repository contains guides for setting up and managing key services.
-
-* 💻 [Proxmox Installation](docs/How_to_install_Proxmox.md): A guide to installing and configuring a Proxmox server, including steps for GPU passthrough and cluster management.
-* 🐧 [Debian Installation](docs/How_to_Install_Debian.md): Instructions for setting up a new Debian system.
-* 🔑 [Account Creation](docs/How_to_create_account.md): A step-by-step process for creating new user accounts with LDAP and Kerberos.
