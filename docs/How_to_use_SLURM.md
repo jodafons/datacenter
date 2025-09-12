@@ -194,12 +194,56 @@ python train_model.py \
     --output-file ${OUTPUT_FILE}
 ```
 
-### Example: Iterating over JSON Files with Output JSON ⚙️
 
-For running multiple experiments, it is useful to loop over configuration files and generate a unique output file for each.
+### Example: Machine Learning Training with Singularity 🤖🐋
 
-First, let's assume you have a directory `configs/` with JSON files. Your Python script `train_model.py` should be updated to accept the config file path and the output file name.
+This is the recommended approach for running complex machine learning tasks. It combines the benefits of a self-contained environment (Singularity) with the power of the Slurm scheduler.
 
+First, ensure your machine learning script, for example, `train_model.py`, is present inside your Singularity container. The script should be designed to accept command-line arguments.
+
+Here is the `sbatch` script that will execute your `train_model.py` script from within the Singularity container, passing the required parameters.
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=ML_Singularity_Training
+#SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+#SBATCH --time=04:00:00
+#SBATCH --output=slurm-ml-singularity-%j.out
+
+# Define the path to your Singularity image file on the cluster
+# Ensure the image file contains your Python script and all dependencies
+IMAGE_PATH="/path/to/my/ml_container.sif"
+
+# Define parameters for the training script
+# These parameters will be passed as arguments to your Python script
+EPOCHS=20
+LEARNING_RATE=0.0005
+BATCH_SIZE=64
+
+# Use 'singularity exec' to run a command inside the container
+# The '--nv' flag is essential for exposing the GPU to the container
+# The '/bin/bash -c "..."' part allows you to run a multi-line command
+singularity exec --nv "$IMAGE_PATH" /bin/bash -c "
+    echo 'Executing ML training script inside the container...'
+
+    # The paths inside the container might be different from the host paths.
+    # Specify the full path to your script as it exists *inside* the container.
+    python /opt/my_ml_project/train_model.py \
+        --epochs ${EPOCHS} \
+        --learning-rate ${LEARNING_RATE} \
+        --batch-size ${BATCH_SIZE}
+
+    echo 'Training script finished. 🎉'
+"
+```
+
+### Example: Iterating over JSON Configuration Files ⚙️
+
+For a parameter sweep or running multiple experiments, a common practice is to have a directory of JSON files, where each file contains the configuration for a single training run.
 
 Let's assume you have a directory named `configs/` with JSON files like this:
 
@@ -230,74 +274,67 @@ Your Python training script (`train_model.py`) should be modified to accept a si
 ```python
 import argparse
 import json
-import os
 #... other imports
 
-def train_model(config_file, output_file):
+def train_model(config_file):
     with open(config_file, 'r') as f:
         config = json.load(f)
     
     print("Training with the following configuration:")
     print(json.dumps(config, indent=2))
     
-    # ... your training logic using 'config' dictionary ...
-
-    # Simulate final metrics based on the config
-    final_metrics = config
-    final_metrics["final_accuracy"] = 0.95 + (config['epochs'] * 0.001)
+    epochs = config['epochs']
+    learning_rate = config['learning_rate']
+    batch_size = config['batch_size']
+    model_name = config['model_name']
     
-    # Write the results to the specified output file
-    with open(output_file, 'w') as f:
-        json.dump(final_metrics, f, indent=4)
-        
-    print(f"Training finished! Results saved to {output_file}. 🎉")
-
+    # Your training logic using these variables
+    # ...
+    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("config_file", help="Path to the JSON configuration file")
-    parser.add_argument("output_file", help="Path to the output JSON file")
     args = parser.parse_args()
     
-    train_model(args.config_file, args.output_file)
+    train_model(args.config_file)
 ```
 
-Now, create the `sbatch` script to loop through the configuration files and submit a job for each one. This script will dynamically generate unique output file names.
+Now, you can create a loop in your `sbatch` script to submit a separate job for each configuration file. A simple `for` loop is a straightforward way to achieve this.
 
 ```bash
 #!/bin/bash
 # A simple loop to submit multiple jobs
 
 CONFIGS_DIR="./configs"
-RESULTS_DIR="./results"
-
-# Create the results directory if it doesn't exist
-mkdir -p ${RESULTS_DIR}
 
 # Loop through all .json files in the configs directory
 for config_file in ${CONFIGS_DIR}/*.json; do
-    
-    # Extract the base name of the config file to use for the output file and job name
-    CONFIG_NAME=$(basename ${config_file} .json)
-    
-    # Define a unique output file name
-    OUTPUT_FILE="${RESULTS_DIR}/${CONFIG_NAME}_metrics.json"
-
-    echo "Submitting job for config: ${CONFIG_NAME}, output file: ${OUTPUT_FILE}"
+    echo "Submitting job for config file: ${config_file}"
     
     # Use sbatch to submit a new job for each file
     # The --wrap option is a convenient way to run a single command without a separate script file
-    sbatch --job-name="ML_${CONFIG_NAME}" \
+    # We pass the config file path as an argument to the python script
+    sbatch --job-name="ML_$(basename ${config_file} .json)" \
            --partition=gpu \
            --nodes=1 \
+           --gres=gpu:1 \
            --cpus-per-task=4 \
            --mem=16G \
            --time=04:00:00 \
-           --output="slurm-${CONFIG_NAME}-%j.out" \
-           --wrap="singularity exec --nv /path/to/my/ml_container.sif python /opt/my_ml_project/train_model.py ${config_file} ${OUTPUT_FILE}"
+           --output="slurm-$(basename ${config_file} .json)-%j.out" \
+           --wrap="singularity exec --nv /path/to/my/ml_container.sif python /opt/my_ml_project/train_model.py ${config_file}"
 done
 
 echo "All jobs submitted. Check squeue to monitor their status."
 ```
+
+### Explanation of the Script:
+
+  * **`for config_file in ${CONFIGS_DIR}/*.json; do`**: This bash loop iterates over every file ending with `.json` in the `./configs` directory.
+  * **`sbatch --wrap="..."`**: This is a powerful feature that allows you to submit a job containing a single command without needing to create an intermediate job script file.
+  * **`--job-name="ML_$(basename ${config_file} .json)"`**: This dynamically sets a unique job name for each run based on the JSON filename (e.g., `ML_exp_01`).
+  * **`--output="..."`**: This dynamically creates unique output files for each job, preventing logs from being overwritten.
+  * **`singularity exec --nv ... train_model.py ${config_file}`**: The path to the current JSON file from the loop is passed as an argument to the Python script inside the container.
 
 ### Submission
 
