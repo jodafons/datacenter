@@ -98,3 +98,10 @@ Is responsible to hold all proxmox backup staff. Is physically located at `10.1.
 
 Not available yet
 
+
+-----
+
+# LPS adminstrator page:
+
+Back to the [main](https://sites.google.com/lps.ufrj.br/infra/início) page!
+
