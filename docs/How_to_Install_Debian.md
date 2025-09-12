@@ -1,6 +1,6 @@
 # Debian Installation Guide for a Slurm Worker Node
 
-This guide provides a detailed, step-by-step walkthrough for installing the Debian operating system on a new node, specifically configured to function as a Slurm worker. Follow these instructions carefully during the installation process. You can download Debian [here](https://drive.google.com/file/d/1YNPPO5Ssl5tpM_stVRoTBEz2mrpjlqD_/view?usp=share_link). Follow the instructions to create a bootable pendrive [here](How_to_create_bootable_pendrive.md)
+This guide provides a detailed, step-by-step walkthrough for installing the Debian operating system on a new node, specifically configured to function as a Slurm worker. Follow these instructions carefully during the installation process. You can download Debian [here](https://drive.google.com/file/d/1YNPPO5Ssl5tpM_stVRoTBEz2mrpjlqD_/view?usp=share_link). Follow the instructions to create a bootable pendrive [here](How_to_create_bootable_pendrive.md).
 
 ---
 
