@@ -4,13 +4,37 @@
 After install the OS debian, follow the steps below to prepare the base node.
 
 
+
 ## Setup network (stage 1):
 
-This script as `sudo` and it will setup the network configuration to `10.1.1.10`. Just tip:
+First, download the network installation script from the repository.
+
+
+```
+wget https://raw.githubusercontent.com/jodafons/datacenter/refs/heads/main/servers/nodes/slurm-node/01_setup_network.sh
+
+```
+
+This script as `sudo` and it will setup the network configuration to `10.1.1.210`. Just tip:
 
 ```
 source 01_setup_network.sh
 ```
+
+After reboot, link the repository folder with the home directory.
+
+```
+ln -s /mnt/market_place/scripts/datacenter
+```
+
+Then, move to the `slurm-node` folder inside datacenter repository.
+
+```
+cd datacenter/servers/nodes/slurm-node
+```
+
+Here, you will find the rest of the scripts to continue the installation.
+
 
 ## Install NFS, Kerberos and LDAP (stage 2):
 
