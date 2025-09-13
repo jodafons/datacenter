@@ -74,6 +74,8 @@ mkdir -p /mnt/cern_data
 mkdir -p /mnt/brics_data
 mkdir -p /mnt/sonar_data
 mkdir -p /mnt/petrobras_data
+mkdir -p /mnt/anatel_data
+mkdir -p /mnt/oceanpact_data
 
 
 echo "10.1.1.202:/volume1/market_place /mnt/market_place nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
@@ -81,6 +83,9 @@ echo "10.1.1.203:/volume1/cern_data /mnt/cern_data nfs rsize=32768,wsize=32768,b
 echo "10.1.1.203:/volume1/brics_data /mnt/brics_data nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
 echo "10.1.1.203:/volume1/sonar_data /mnt/sonar_data nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
 echo "10.1.1.203:/volume1/petrobras_data /mnt/petrobras_data nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+echo "10.1.1.203:/volume1/anatel_data /mnt/anatel_data nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+echo "10.1.1.203:/volume1/oceanpact_data /mnt/oceanpact_data nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+
 
 mount -a
 
