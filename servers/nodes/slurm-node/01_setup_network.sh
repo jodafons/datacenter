@@ -15,9 +15,9 @@ apt install -y net-tools
 # change hostname
 #
 
-hostnamectl set-hostname slurm-worker
+hostnamectl set-hostname slurm-node
 echo "127.0.0.1       localhost
-127.0.1.1       slurm-worker.lps.ufrj.br    slurm-worker
+127.0.1.1       slurm-node.lps.ufrj.br    slurm-node
 # The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
