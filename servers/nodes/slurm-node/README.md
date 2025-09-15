@@ -21,7 +21,7 @@ This script as `sudo` and it will setup the network configuration to `10.1.1.210
 source 01_setup_network.sh
 ```
 
-After reboot, link the repository folder with the home directory.
+After reboot (now as `10.1.1.210`), link the repository folder with the home directory.
 
 ```
 ln -s /mnt/market_place/scripts/datacenter
@@ -117,7 +117,21 @@ Tip `singularity` into the terminal. If you get the `man` page, eveything its re
 
 
 
-## Install NVIDIA (stage 5):
+## Install Docker (stage 5):
+
+Just tip as `sudo`:
+
+```
+source 05_install_docker.sh
+```
+
+### Health check:
+
+Tip `docker` into the terminal. If you get the `man` page, eveything its ready.
+
+
+
+## Install NVIDIA (stage 6):
 
 
 ### Add pci device by proxmox:
@@ -160,7 +174,7 @@ Tip `nvidia-smi` to check if the gpu is available.
 
 
 ```
-source install_cuda.sh
+source 06_install_cuda.sh
 ```
 
 Q&A options:
