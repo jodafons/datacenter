@@ -130,6 +130,8 @@ source 05_install_docker.sh
 Tip `docker` into the terminal. If you get the `man` page, eveything its ready.
 
 
+After install everything until here, go to proxmox server and backup this image into the storage02. This image will be used to propogate the node to all clusters (only CPU bounded) into the infrastructure.
+
 
 ## Install NVIDIA (stage 6):
 
@@ -185,4 +187,5 @@ Q&A options:
 To check if cuda is ready, tip `nvcc --version`.
 
 
+After install everything until here, go to proxmox server and backup this image into the storage02. This image will be used to propogate the node to all clusters (only GPU bounded) into the infrastructure.
 
