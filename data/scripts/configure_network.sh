@@ -25,7 +25,7 @@ hostnamectl
 
 # change ip
 #network_interface=$(ip link | awk -F: '$0 !~ "lo|vir|wl|^[^0-9]"{print $2;getline}')
-network_interface=$(ip -br l | awk '$1 !~ "lo|vir|wl" { print $1}')
+network_interface=$(ip -br l | awk '$1 !~ "lo|vir|wl" { print $1}' | head -n 1)
 
 echo "
 # and how to activate them. For more information, see interfaces(5).
