@@ -115,12 +115,12 @@ class VM(Playbook):
         sleep(40)
         if not ok:
             return False
-        print(f"configure network into {self.vm_name}")
-        ok = self.configure()
-        if not ok:
-            return False    
-        print("take a snapshot...")
-        self.snapshot(snapname)
+        #print(f"configure network into {self.vm_name}")
+        #ok = self.configure()
+        #if not ok:
+        #    return False    
+        #print("take a snapshot...")
+        #self.snapshot(snapname)
         return True
 
       
