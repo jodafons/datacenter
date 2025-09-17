@@ -3,9 +3,9 @@
 import argparse
 import sys
 
-from novacula                   import get_argparser_formatter
-from novacula.proxmox.cluster   import Cluster, cluster_create_parser, cluster_destroy_parser, cluster_reboot_parser, cluster_ping_parser
-from novacula.proxmox.vm        import VM, vm_create_parser, vm_destroy_parser,  vm_ping_parser
+from datacenter                   import get_argparser_formatter
+from datacenter.proxmox.cluster   import Cluster, cluster_create_parser, cluster_destroy_parser, cluster_reboot_parser, cluster_ping_parser
+from datacenter.proxmox.vm        import VM, vm_create_parser, vm_destroy_parser,  vm_ping_parser
 
 def create_vm(args) -> VM:
   return VM( args.name, 
@@ -64,7 +64,7 @@ def run_parser(args):
 
 def run():
 
-    parser = build_argparser(custom=True)
+    parser = build_argparser()
     if len(sys.argv)==1:
         print(parser.print_help())
         sys.exit(1)

@@ -24,12 +24,14 @@
         }
     },
     "images":{
-        "ufrj-caloba-cpu":"/mnt/pve/storage02/dump/vzdump-qemu-300-2025_02_26-17_07_06.vma.zst",
-        "ufrj-caloba-gpu":"/mnt/pve/storage02/dump/vzdump-qemu-300-2025_02_26-15_05_17.vma.zst"
-
+        "paths" : {
+            "cpu":"/mnt/pve/storage02/dump/vzdump-qemu-351-2025_09_17-12_43_02.vma.zst", 
+            "gpu":"/mnt/pve/storage02/dump/vzdump-qemu-300-2025_02_26-15_05_17.vma.zst"
+        },
+        "hostname": "slurm-node"
     },
     "vm":{
-        "hosts":{
+        
             "caloba51":{
                 "host"      : "caloba-v13",
                 "ip_address": "10.1.1.51",
@@ -38,8 +40,8 @@
                 "cores"     : 20,
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
-                "vmname"    : "caloba51",
-                "image"     : "ufrj-caloba-cpu"
+                "vm_name"    : "caloba51",
+                "image"     : "cpu"
             },
             "caloba52":{
                 "host"      : "caloba-v14",
@@ -49,8 +51,8 @@
                 "cores"     : 20,
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
-                "vmname"    : "caloba52",
-                "image"     : "ufrj-caloba-cpu"
+                "vm_name"    : "caloba52",
+                "image"     : "cpu"
 
             },
             "caloba53":{
@@ -61,8 +63,8 @@
                 "cores"     : 20,
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
-                "vmname"    : "caloba53",
-                "image"     : "ufrj-caloba-cpu"
+                "vm_name"    : "caloba53",
+                "image"     : "cpu"
 
             },
             "caloba54":{
@@ -73,8 +75,8 @@
                 "cores"     : 24,
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
-                "vmname"    : "caloba54",
-                "image"     : "ufrj-caloba-cpu"
+                "vm_name"    : "caloba54",
+                "image"     : "cpu"
             },
             "caloba71":{
                 "host"      : "caloba-v01",
@@ -84,7 +86,7 @@
                 "cores"     : 10,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba71",
+                "vm_name"    : "caloba71",
                 "image"     : "ufrj-caloba-gpu"
 
             },
@@ -96,7 +98,7 @@
                 "cores"     : 10,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba72",
+                "vm_name"    : "caloba72",
                 "image"     : "ufrj-caloba-gpu"
 
             },
@@ -108,7 +110,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba73",
+                "vm_name"    : "caloba73",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba74":{
@@ -119,7 +121,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba74",
+                "vm_name"    : "caloba74",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba75":{
@@ -130,7 +132,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba75",
+                "vm_name"    : "caloba75",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba76":{
@@ -141,7 +143,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba76",
+                "vm_name"    : "caloba76",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba77":{
@@ -152,7 +154,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba77",
+                "vm_name"    : "caloba77",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba78":{
@@ -163,7 +165,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba78",
+                "vm_name"    : "caloba78",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba79":{
@@ -174,7 +176,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba79",
+                "vm_name"    : "caloba79",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba80":{
@@ -185,7 +187,7 @@
                 "cores"     : 8,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba80",
+                "vm_name"    : "caloba80",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba91":{
@@ -196,7 +198,7 @@
                 "cores"     : 8,
                 "memory_mb" : 20480,
                 "storage"   : "storage02",
-                "vmname"    : "caloba91",
+                "vm_name"    : "caloba91",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba92":{
@@ -207,7 +209,7 @@
                 "cores"     : 8,
                 "memory_mb" : 20480,
                 "storage"   : "storage02",
-                "vmname"    : "caloba92",
+                "vm_name"    : "caloba92",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba93":{
@@ -218,7 +220,7 @@
                 "cores"     : 10,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba93",
+                "vm_name"    : "caloba93",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba94":{
@@ -229,7 +231,7 @@
                 "cores"     : 10,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba94",
+                "vm_name"    : "caloba94",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba95":{
@@ -240,7 +242,7 @@
                 "cores"     : 10,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba95",
+                "vm_name"    : "caloba95",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba96":{
@@ -251,7 +253,7 @@
                 "cores"     : 10,
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
-                "vmname"    : "caloba96",
+                "vm_name"    : "caloba96",
                 "image"     : "ufrj-caloba-gpu"
             },
             "caloba97":{
@@ -262,11 +264,11 @@
                 "cores"     : 12,
                 "memory_mb" : 61440,
                 "storage"   : "storage02",
-                "vmname"    : "caloba97",
+                "vm_name"    : "caloba97",
                 "image"     : "ufrj-caloba-gpu"
             }
 
 
         }
-    }
+    
 }

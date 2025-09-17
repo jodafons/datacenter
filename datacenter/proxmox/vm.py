@@ -3,10 +3,11 @@ __all__ = ["VM"]
 
 import argparse
 
-from time             import sleep
-from typing           import Union
-from novacula.ansible import Playbook, Command
-from novacula         import get_cluster_config
+from time               import sleep
+from typing             import Union
+from datacenter.ansible import Playbook, Command
+from datacenter         import get_cluster_config
+from datacenter         import get_argparser_formatter
 
 
 
@@ -21,13 +22,13 @@ class VM(Playbook):
         Playbook.__init__(self, dry_run=dry_run, verbose=verbose)
         self.vm_name = vm_name
         self.cluster_config = get_cluster_config()
-        self.vm_init_name = self.cluster_config['vm']['init_name']
+        self.vm_init_name = self.cluster_config['images']['hostname']
 
     def vm(self, key : str) -> Union[str,int]:
-        return self.cluster_config['vm']['hosts'][self.vm_name][key]
+        return self.cluster_config['vm'][self.vm_name][key]
 
     def image(self) -> str:
-        return self.cluster_config['images'][self.vm("image")]
+        return self.cluster_config['images']['paths'][self.vm("image")]
 
     def ping(self):
         self.ping_hosts(self.vm_name)
@@ -59,10 +60,10 @@ class VM(Playbook):
         cores      = self.vm("cores")
         memory_mb  = self.vm("memory_mb")
         storage    = self.vm("storage")
-        vm_name     = self.vm("vm_name") 
+        vm_name    = self.vm("vm_name") 
 
         command = Command("restore vm...")
-        command+= f"qm restore {image} {vmid} --storage {storage} --unique --force"
+        command+= f"qmrestore {image} {vmid} --storage {storage} --unique --force"
         command+= f"qm set {vmid} --name {vm_name} --sockets {sockets} --cores {cores} --memory {memory_mb}"
         command+= f"qm start {vmid}"
         return self.run_shell_on_host(command)
@@ -84,17 +85,17 @@ class VM(Playbook):
   
     def configure(self) -> bool:
         ip_address = self.vm("ip_address")
-        script_http = "https://raw.githubusercontent.com/jodafons/lps-cluster/refs/heads/main/playbooks/yaml/vm/configure_network.sh" 
+        script_http = "https://raw.githubusercontent.com/jodafons/datacenter/refs/heads/main/data/scripts/configure_network.sh" 
         script_name = script_http.split("/")[-1]
         command = Command(f"configure network on vm {self.vm_name}...")
         command+= f"wget {script_http} && bash {script_name} {self.vm_name} {ip_address}"
         params  = {
-              "command"    : command(),
-              "ip_address" : ip_address,
+              "command"    : f"'{command()}'",
+              "ip_address" : f"'{ip_address}'",
               "vm_name"    : self.vm_name,
         }
     
-        return self.run("/vm/configure_network.yaml", self.vm_init_name, params)
+        return self.run("configure_network.yaml", self.vm_init_name, params)
     
 
     #

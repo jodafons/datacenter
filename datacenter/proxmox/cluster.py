@@ -4,8 +4,8 @@ import argparse
 
 from time             import sleep
 from typing           import Dict, List
-from novacula.ansible import Playbook, Command
-from novacula         import get_cluster_config, get_master_key, get_argparser_formatter
+from datacenter.ansible import Playbook, Command
+from datacenter         import get_cluster_config, get_master_key, get_argparser_formatter
 
 class Cluster(Playbook):
   
@@ -80,11 +80,12 @@ class Cluster(Playbook):
 
     def create_nodes(self) -> bool:
         print(f"add nodes into the cluster {self.cluster}...")
+        ip_address = self.cluster('ip_address')
         params = {
-           "ip_address" : self.cluster("ip_address"),
-           "master_key" : get_master_key()
+           "ip_address" : f"'{ip_address}'",
+           "master_key" : f"'{get_master_key()}'"
         }
-        return self.run_script_on_all("host/add_node.yaml", params)
+        return self.run_script_on_all("add_node.yaml", params)
 
 
     def create_storage(self, storage : Dict[str,str]) -> bool:
@@ -98,7 +99,7 @@ class Cluster(Playbook):
 
 
     def configure_nodes(self) -> bool:
-      script_http = "https://raw.githubusercontent.com/jodafons/lps-cluster/refs/heads/main/playbooks/yaml/host/configure_node.py"
+      script_http = "https://raw.githubusercontent.com/jodafons/datacenter/refs/heads/main/data/scripts/configure_node.py"
       script_name = script_http.split("/")[-1]
       command     = Command("configure nodes...")
       command    += f"wget {script_http} && python3 {script_name}"
@@ -117,6 +118,8 @@ class Cluster(Playbook):
 
 
     def create(self) -> bool:
+
+
       print(f"[step 1] resetting all nodes into the cluster {self.cluster}...")
       ok = self.reset()
       if not ok:
@@ -137,7 +140,7 @@ class Cluster(Playbook):
         return False
 
       sleep(10)
-      print(f"[step 4] add nodes into the cluster {self.cluster_nam}...")
+      print(f"[step 4] add nodes into the cluster {self.cluster_name}...")
 
       ok = self.create_nodes()
       if not ok:

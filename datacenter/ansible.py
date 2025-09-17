@@ -2,10 +2,10 @@ __all__ = ["Command",
            "Playbook"]
 
 
-import os, traceback
+import os, traceback, tempfile
 
 from typing import Dict
-from novacula import get_host_path, get_playbook_path
+from datacenter import get_host_path, get_playbook_path,get_master_key
 
 
 
@@ -29,7 +29,7 @@ class Playbook:
                host_path : str=get_host_path(),
                dry_run   : bool=False,
                verbose   : bool=False,
-               envs      : Dict = {"ANSIBLE_HOST_KEY_CHECKING":"False"}
+               envs      : Dict = {"ANSIBLE_HOST_KEY_CHECKING":"False"},
                ):
         """
         Initializes the Ansible class with the specified parameters.
@@ -70,8 +70,8 @@ class Playbook:
                   script      : str="shell.yaml"
                 ) -> bool:
         params = {
-            "command": command(),
-            "description": command.description,
+            "command": f"'{command()}'",
+            "description": f"'{command.description}'",
         }
         return self.run(script, hosts, params)
 
@@ -81,15 +81,32 @@ class Playbook:
             params  = {"hosts": hosts, **params}
             preexec = " && ".join([f"export {key}={value}" for key, value in self.envs.items()])
             params  = " ".join([f"{key}={value}" for key, value in params.items()])
-            command = f'{preexec} && ansible-playbook -i {self.hosts} {script} -e "{params}"'
-            if self.verbose:
-                command += " -vv"
-            print(command)
-            try:
-                if not self.dry_run:
-                    os.system(command)
-                return True
-            except:
-                traceback.print_exc()
-                return False
+
+            ok = False
+
+            with tempfile.TemporaryDirectory() as temp_dir:
+                print(f"Temporary directory created at: {temp_dir}")
+                # Define the path for the file within the temporary directory
+                file_path = os.path.join(temp_dir, "hosts")
+
+                with open(file_path, 'w') as f:
+                    with open(self.host_path, mode='r') as f_original:
+                        for line in f_original.readlines():
+                            f.write(line.replace("$CLUSTER_MASTER_KEY", get_master_key()) )
+                    print(f.name)
+                
+                command = f'{preexec} && ansible-playbook -i {file_path} {script} -e "{params}"'
+
+
+                if self.verbose:
+                    command += " -vv"
+                print(command)
+                try:
+                    if not self.dry_run:
+                        os.system(command)
+                    ok = True
+                except:
+                    traceback.print_exc()
+            return ok        
+
 

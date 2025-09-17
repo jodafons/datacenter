@@ -7,3 +7,21 @@ This repository contains all scripts and topology of the Caloba cluster. The Cal
 * 🐧 [Debian Installation](docs/How_to_Install_Debian.md): Instructions for setting up a new Debian system.
 * 🔑 [Account Creation](docs/How_to_create_account.md): A step-by-step process for creating new user accounts with LDAP and Kerberos.
 * 💾 [Bootable Pendrive](docs/How_to_create_bootable_pendrive.md): Instructions for create a bootable pendrive on Linux or MacOS.
+
+
+### Recreate the cluster
+
+play cluster create -n cpu-large
+
+### Reboot all physical nodels
+
+play cluster reboot -n cpu-large
+
+### Restore a node into the cluster:
+
+play vm create -n caloba51
+
+### Destroy a node into the cluster:
+
+play vm destroy -n caloba51
+
