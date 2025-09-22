@@ -112,9 +112,9 @@ class VM(Playbook):
     def create(self, snapname : str="base") -> bool:  
         print(f"restore image into the host...")  
         ok = self.restore()
-        sleep(40)
-        if not ok:
-            return False
+        #sleep(40)
+        #if not ok:
+        #    return False
         #print(f"configure network into {self.vm_name}")
         #ok = self.configure()
         #if not ok:
