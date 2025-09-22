@@ -108,7 +108,7 @@ dorothy-image               IN    CNAME proxy-server.lps.ufrj.br.
 pgadmin                     IN    CNAME proxy-server.lps.ufrj.br.
 cad                         IN    CNAME proxy-server.lps.ufrj.br.
 idcs                        IN    CNAME proxy-server.lps.ufrj.br.
-indico-server               IN    CNAME proxy-server.lps.ufrj.br.
+indico                      IN    CNAME proxy-server.lps.ufrj.br.
 
 
 
