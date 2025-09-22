@@ -23,15 +23,14 @@ apt install -y nfs-common
 # NFS
 #
 mkdir -p /mnt/market_place
-mkdir -p /mnt/shared/storage01/homes
-mkdir -p /mnt/shared/storage02/homes
-mkdir -p /mnt/shared/storage02/projects
+#mkdir -p /mnt/shared/storage01/homes
+#mkdir -p /mnt/shared/storage02/homes
+mkdir -p /mnt/shared/storage02/volumes
 
 echo "10.1.1.202:/volume1/market_place /mnt/market_place nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-echo "10.1.1.203:/volume1/projects /mnt/shared/storage02/projects nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-echo "10.1.1.203:/volume1/homes /mnt/shared/storage02/homes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-echo "10.1.1.202:/volume1/homes /mnt/shared/storage01/homes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-ln -s /mnt/shared/storage02/projects/brics_data /mnt/brics_data
+#echo "10.1.1.203:/volume1/projects /mnt/shared/storage02/projects nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+#echo "10.1.1.203:/volume1/homes_data /mnt/shared/storage02/homes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+echo "10.1.1.203:/volume1/volumes /mnt/shared/storage02/volumes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
 
 
 
