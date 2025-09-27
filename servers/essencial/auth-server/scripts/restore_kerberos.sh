@@ -1,1 +1,0 @@
-sudo kdb5_util load -d /mnt/market_place/data/lps.ufrj.br.krb5
