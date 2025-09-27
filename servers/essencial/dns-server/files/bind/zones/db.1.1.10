@@ -1,0 +1,111 @@
+;
+; Reverse DNS for LPS
+;
+$TTL  7200
+@ IN  SOA ns.lps.ufrj.br. netadmin.lps.ufrj.br. (
+      2025092200  ; Serial
+      7200        ; Refresh (2h)
+      3600        ; Retry (1h)
+      31536000    ; Expire (1y)
+      10800 )     ; Negative Cache TTL
+
+  IN  NS  ns.lps.ufrj.br.
+
+
+
+;
+; SLURM new stuff
+;
+
+; CPU smalll
+12  IN  PTR caloba12.lps.ufrj.br.
+13  IN  PTR caloba13.lps.ufrj.br.
+14  IN  PTR caloba14.lps.ufrj.br.
+15  IN  PTR caloba15.lps.ufrj.br.
+16  IN  PTR caloba16.lps.ufrj.br.
+17  IN  PTR caloba17.lps.ufrj.br.
+18  IN  PTR caloba18.lps.ufrj.br.
+19  IN  PTR caloba19.lps.ufrj.br.
+
+
+; CPU large
+50  IN  PTR caloba51.lps.ufrj.br.
+51  IN  PTR caloba51.lps.ufrj.br.
+52  IN  PTR caloba52.lps.ufrj.br.
+53  IN  PTR caloba53.lps.ufrj.br.
+54  IN  PTR caloba54.lps.ufrj.br.
+55  IN  PTR caloba55.lps.ufrj.br.
+56  IN  PTR caloba56.lps.ufrj.br.
+57  IN  PTR caloba57.lps.ufrj.br.
+58  IN  PTR caloba58.lps.ufrj.br.
+
+
+; GPU
+70  IN  PTR caloba70.lps.ufrj.br.
+71  IN  PTR caloba71.lps.ufrj.br.
+72  IN  PTR caloba72.lps.ufrj.br.
+73  IN  PTR caloba73.lps.ufrj.br.
+74  IN  PTR caloba74.lps.ufrj.br.
+75  IN  PTR caloba75.lps.ufrj.br.
+76  IN  PTR caloba76.lps.ufrj.br.
+77  IN  PTR caloba77.lps.ufrj.br.
+78  IN  PTR caloba78.lps.ufrj.br.
+79  IN  PTR caloba79.lps.ufrj.br.
+80  IN  PTR caloba80.lps.ufrj.br.
+81  IN  PTR caloba81.lps.ufrj.br.
+82  IN  PTR caloba82.lps.ufrj.br.
+83  IN  PTR caloba83.lps.ufrj.br.
+84  IN  PTR caloba84.lps.ufrj.br.
+85  IN  PTR caloba85.lps.ufrj.br.
+
+
+
+
+; GPU large
+90  IN  PTR caloba90.lps.ufrj.br.
+91  IN  PTR caloba91.lps.ufrj.br.
+92  IN  PTR caloba92.lps.ufrj.br.
+93  IN  PTR caloba93.lps.ufrj.br.
+94  IN  PTR caloba94.lps.ufrj.br.
+95  IN  PTR caloba95.lps.ufrj.br.
+96  IN  PTR caloba96.lps.ufrj.br.
+97  IN  PTR caloba97.lps.ufrj.br.
+98  IN  PTR caloba98.lps.ufrj.br.
+99  IN  PTR caloba99.lps.ufrj.br.
+
+
+;
+; proxmox machines (101-119)
+;
+101 IN  PTR caloba-v01.lps.ufrj.br.
+102 IN  PTR caloba-v02.lps.ufrj.br.
+103 IN  PTR caloba-v03.lps.ufrj.br.
+104 IN  PTR caloba-v04.lps.ufrj.br.
+105 IN  PTR caloba-v05.lps.ufrj.br.
+106 IN  PTR caloba-v06.lps.ufrj.br.
+107 IN  PTR caloba-v07.lps.ufrj.br.
+108 IN  PTR caloba-v08.lps.ufrj.br.
+109 IN  PTR caloba-v09.lps.ufrj.br.
+110 IN  PTR caloba-v10.lps.ufrj.br.
+111 IN  PTR caloba-v11.lps.ufrj.br.
+112 IN  PTR caloba-v12.lps.ufrj.br.
+113 IN  PTR caloba-v13.lps.ufrj.br.
+114 IN  PTR caloba-v14.lps.ufrj.br.
+115 IN  PTR caloba-v15.lps.ufrj.br.
+116 IN  PTR caloba-v16.lps.ufrj.br.
+117 IN  PTR caloba-v17.lps.ufrj.br.
+118 IN  PTR caloba-v18.lps.ufrj.br.
+119 IN  PTR caloba-v19.lps.ufrj.br.
+120 IN  PTR caloba-v20.lps.ufrj.br.
+
+
+
+
+
+;
+; Storages (201-210)
+;
+202 IN  PTR storage01.lps.ufrj.br.
+203 IN  PTR storage02.lps.ufrj.br.
+204 IN  PTR storage03.lps.ufrj.br.
+205 IN  PTR storage04.lps.ufrj.br.

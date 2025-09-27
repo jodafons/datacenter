@@ -9,7 +9,7 @@ with open("requirements.txt", "r") as f:
 
 
 setup(
-    name='novacula',
+    name='datacenter',
     version='1.0.0',
     license='GPL-3.0',
     description='',
@@ -31,7 +31,7 @@ setup(
     ],
     entry_points = {
         'console_scripts' : [
-            'play = novacula.main:run',
+            'play = datacenter.main:run',
         ]
     }
 )

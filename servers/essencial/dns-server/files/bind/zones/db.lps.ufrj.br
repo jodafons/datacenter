@@ -1,0 +1,252 @@
+;
+; Zone for LPS
+;
+$TTL      7200
+@     IN   SOA       ns.lps.ufrj.br. netadmin.lps.ufrj.br. (
+           2025092200    ; Serial (YOU NEED TO CHANGE THIS EVERY UPDATE)
+           7200          ; Refresh (2h)
+           3600          ; Retry (1h)
+           31536000      ; Expire (1y)
+           10800 )       ; Negative Cache TTL
+;
+; Basic NS configuration
+;
+      IN      NS      ns.lps.ufrj.br.
+      IN      NS      stic-dns.ufrj.br.
+      IN      NS      stic2-dns.ufrj.br.
+      IN      NS      stic3-dns.ufrj.br.
+
+;
+; Mail
+;
+  4w      IN      MX 1      ASPMX.L.GOOGLE.COM.
+  4w      IN      MX 5      ALT1.ASPMX.L.GOOGLE.COM.
+  4w      IN      MX 5      ALT2.ASPMX.L.GOOGLE.COM.
+  4w      IN      MX 10     ASPMX2.GOOGLEMAIL.COM.
+  4w      IN      MX 10     ASPMX3.GOOGLEMAIL.COM.
+
+;
+; SPF entries
+;
+          IN      TXT     "v=spf1 mx include:_spf.google.com ~all"
+          IN      SPF     "v=spf1 mx include:_spf.google.com ~all"
+
+;
+; Google Services
+;
+mail        4w     IN    CNAME     ghs.googlehosted.com.
+drive       4w     IN    CNAME     ghs.googlehosted.com.
+calendar    4w     IN    CNAME     ghs.googlehosted.com.
+
+;
+; Default IP
+;
+@     IN    A     146.164.147.40
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+; LPS Network (146.164.147.0/24)
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;
+; Networking and private hardware
+;
+lps1-wlan                   IN    A     146.164.147.65
+hp4200dtn                   IN    A     146.164.147.66
+
+;
+; Network related addresses
+;
+
+localhost                   IN    A     127.0.0.1
+net                         IN    A     146.164.147.0
+gw                          IN    A     146.164.147.1 ; microtick, gateway
+ns                          IN    A     146.164.147.2 ; dns service
+fingerprint                 IN    A     146.164.147.197
+printer01                   IN    A     146.164.147.12
+printer02                   IN    A     146.164.147.13
+printer03                   IN    A     146.164.147.14
+
+; proxmox servers
+service01                   IN    A     146.164.147.101 ; service virtualization (LPS base services)
+service02                   IN    A     146.164.147.102 ; service virtualization (external services)
+service03                   IN    A     146.164.147.103 ; service virtualization with gpu (external services)
+
+
+
+
+; hosted into service 01
+auth-server                 IN    A     146.164.147.3   ; kerberos and ldap
+slurm-server                IN    A     146.164.147.4   ; slurm frontend
+login-server                IN    A     146.164.147.5   ; login
+vpn-server                  IN    A     146.164.147.6   ; openvpn
+copy-server                 IN    A     146.164.147.7   ; openvpn
+
+
+; hosted into service02
+proxy-server                IN    A     146.164.147.40  ; nginx proxy server
+www-server                  IN    A     146.164.147.41  ; sites
+dorothy-server              IN    A     146.164.147.42  ; brics server 
+runner-server               IN    A     146.164.147.43  ; github self-runner
+postgres-server             IN    A     146.164.147.44  ; postgres
+mlflow-server               IN    A     146.164.147.45  ; mlflow
+maestro-server              IN    A     146.164.147.46  ;
+cad-server                  IN    A     146.164.147.47  ; 
+docker-server               IN    A     146.164.147.48  ; 
+indico-server               IN    A     146.164.147.49  ; 
+
+www                         IN    CNAME proxy-server.lps.ufrj.br.
+paf                         IN    CNAME proxy-server.lps.ufrj.br.
+virtuais                    IN    CNAME proxy-server.lps.ufrj.br.
+dorothy                     IN    CNAME proxy-server.lps.ufrj.br.
+dorothy-mlflow              IN    CNAME proxy-server.lps.ufrj.br.
+dorothy-image               IN    CNAME proxy-server.lps.ufrj.br.
+pgadmin                     IN    CNAME proxy-server.lps.ufrj.br.
+cad                         IN    CNAME proxy-server.lps.ufrj.br.
+idcs                        IN    CNAME proxy-server.lps.ufrj.br.
+indico                      IN    CNAME proxy-server.lps.ufrj.br.
+
+
+
+
+;
+; Stations with fixed IP (201-234)
+;
+bancada01   IN      A     146.164.147.201
+bancada02   IN      A     146.164.147.202
+bancada03   IN      A     146.164.147.203
+bancada04   IN      A     146.164.147.204
+bancada05   IN      A     146.164.147.205
+bancada06   IN      A     146.164.147.206
+bancada07   IN      A     146.164.147.207
+bancada08   IN      A     146.164.147.208
+bancada09   IN      A     146.164.147.209
+bancada10   IN      A     146.164.147.210
+bancada11   IN      A     146.164.147.211
+bancada12   IN      A     146.164.147.212
+
+
+
+
+
+;
+; DHCP (235-254)
+;
+dyn-01      IN      A     146.164.147.235
+dyn-02      IN      A     146.164.147.236
+dyn-03      IN      A     146.164.147.237
+dyn-04      IN      A     146.164.147.238
+dyn-05      IN      A     146.164.147.239
+dyn-06      IN      A     146.164.147.240
+dyn-07      IN      A     146.164.147.241
+dyn-08      IN      A     146.164.147.242
+dyn-09      IN      A     146.164.147.243
+dyn-10      IN      A     146.164.147.244
+dyn-11      IN      A     146.164.147.245
+dyn-12      IN      A     146.164.147.246
+dyn-13      IN      A     146.164.147.247
+dyn-14      IN      A     146.164.147.248
+dyn-15      IN      A     146.164.147.249
+dyn-16      IN      A     146.164.147.250
+dyn-17      IN      A     146.164.147.251
+dyn-18      IN      A     146.164.147.252
+dyn-19      IN      A     146.164.147.253
+dyn-20      IN      A     146.164.147.254
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     ;
+;         SLURM Network (10.1.1.0/24)     ;
+;     ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+; CPU small
+caloba12        IN      A     10.1.1.12
+caloba13        IN      A     10.1.1.13
+caloba14        IN      A     10.1.1.14
+caloba15        IN      A     10.1.1.15
+caloba16        IN      A     10.1.1.16
+caloba17        IN      A     10.1.1.17
+caloba18        IN      A     10.1.1.18
+caloba19        IN      A     10.1.1.19
+
+; CPU large
+caloba50        IN      A     10.1.1.50
+caloba51        IN      A     10.1.1.51
+caloba52        IN      A     10.1.1.52
+caloba53        IN      A     10.1.1.53
+caloba54        IN      A     10.1.1.54
+caloba55        IN      A     10.1.1.55
+
+; GPU
+caloba70        IN      A     10.1.1.70
+caloba71        IN      A     10.1.1.71
+caloba72        IN      A     10.1.1.72
+caloba73        IN      A     10.1.1.73
+caloba74        IN      A     10.1.1.74
+caloba75        IN      A     10.1.1.75
+caloba76        IN      A     10.1.1.76
+caloba77        IN      A     10.1.1.77
+caloba78        IN      A     10.1.1.78
+caloba79        IN      A     10.1.1.79
+caloba80        IN      A     10.1.1.80
+caloba81        IN      A     10.1.1.81
+caloba82        IN      A     10.1.1.82
+caloba83        IN      A     10.1.1.83
+caloba84        IN      A     10.1.1.84
+caloba85        IN      A     10.1.1.85
+
+; GPU large
+caloba90        IN      A     10.1.1.90
+caloba91        IN      A     10.1.1.91
+caloba92        IN      A     10.1.1.92
+caloba93        IN      A     10.1.1.93
+caloba94        IN      A     10.1.1.94
+caloba95        IN      A     10.1.1.95
+caloba96        IN      A     10.1.1.96
+caloba97        IN      A     10.1.1.97
+caloba98        IN      A     10.1.1.98
+
+
+
+;
+; Proxmox server (101-119)
+;
+caloba-v01      IN      A     10.1.1.101
+caloba-v02      IN      A     10.1.1.102
+caloba-v03      IN      A     10.1.1.103
+caloba-v04      IN      A     10.1.1.104
+caloba-v05      IN      A     10.1.1.105
+caloba-v06      IN      A     10.1.1.106
+caloba-v07      IN      A     10.1.1.107
+caloba-v08      IN      A     10.1.1.108
+caloba-v09      IN      A     10.1.1.109
+caloba-v10      IN      A     10.1.1.110
+caloba-v11      IN      A     10.1.1.111
+caloba-v12      IN      A     10.1.1.112
+caloba-v13      IN      A     10.1.1.113
+caloba-v14      IN      A     10.1.1.114
+caloba-v15      IN      A     10.1.1.115
+caloba-v16      IN      A     10.1.1.116
+caloba-v17      IN      A     10.1.1.117
+caloba-v18      IN      A     10.1.1.118
+caloba-v19      IN      A     10.1.1.119
+caloba-v20      IN      A     10.1.1.120
+
+
+;
+; Storages (201-210)
+;
+storage01     IN    A     10.1.1.202
+storage02     IN    A     10.1.1.203
+storage03     IN    A     10.1.1.204
+storage04     IN    A     10.1.1.205
+
