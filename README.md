@@ -8,6 +8,11 @@ This repository contains all scripts and topology of the Caloba cluster. The Cal
 * 🐧 [Debian Installation](docs/How_to_Install_Debian.md): Instructions for setting up a new Debian system.
 * 🔑 [Account Creation](docs/How_to_create_account.md): A step-by-step process for creating new user accounts with LDAP and Kerberos.
 * 💾 [Bootable Pendrive](docs/How_to_create_bootable_pendrive.md): Instructions for create a bootable pendrive on Linux or MacOS.
+* [sbatch](docs/How_to_use_sbatch.md)
+* [singularity build](docs/How_to_build_a_singularity_image.md)
+* [singularity usage](docs/How_to_use_singularity.md)
+* [slurm](docs/How_to_use_slurm.md)
+
 
 
 ### Recreate the cluster
