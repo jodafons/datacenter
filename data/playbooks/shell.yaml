@@ -1,9 +1,0 @@
----
-- name: Shell
-  hosts: "{{hosts}}"
-  remote_user: root
-  become: yes
-  tasks:
-     - name: "{{description}}"
-       ansible.builtin.shell: |
-        {{command}}
