@@ -83,7 +83,7 @@ class VM(Playbook):
         return self.run_shell_on_host(command)
   
   
-    def configure(self) -> bool:
+    def configure_network(self) -> bool:
         ip_address = self.vm("ip_address")
         script_http = "https://raw.githubusercontent.com/jodafons/datacenter/refs/heads/main/data/scripts/configure_network.sh" 
         script_name = script_http.split("/")[-1]
@@ -98,6 +98,16 @@ class VM(Playbook):
         return self.run("configure_network.yaml", self.vm_init_name, params)
     
 
+    def configure_options(self) -> bool:
+        vmid  = self.vm("vmid")
+        device = self.vm("pci")
+        command = Command(f"set VM options...")
+        if device!="":
+            command+= f"qm set {vmid} -hostpci0 {device}"
+        command+= f"qm set {vmid} --onboot 1"
+        return self.run_shell_on_host(command)
+
+
     #
     # VM operations
     #
@@ -105,22 +115,28 @@ class VM(Playbook):
     def destroy(self) -> bool:
         vmid = self.vm("vmid")
         command = Command(f"destroy vm {self.vm_name}...")
-        command+= f"qm stop {vmid} && qm destroy {vmid}"
+        command+= f"qm stop {vmid} && qm destroy {vmid} --destroy-unreferenced-disks"
         return self.run_shell_on_host(command)
      
   
     def create(self, snapname : str="base") -> bool:  
         print(f"restore image into the host...")  
         ok = self.restore()
-        #sleep(40)
-        #if not ok:
-        #    return False
-        #print(f"configure network into {self.vm_name}")
-        #ok = self.configure()
-        #if not ok:
-        #    return False    
-        #print("take a snapshot...")
-        #self.snapshot(snapname)
+        sleep(40)
+        if not ok:
+            return False
+        print(f"configure network into {self.vm_name}")
+        ok = self.configure_network()
+        if not ok:
+            return False    
+        print(f"configure options into {self.vm_name}")
+        ok = self.configure_options()
+        if not ok:
+            return False    
+        print("take a snapshot...")
+        self.snapshot(snapname)
+
+        self.reboot()
         return True
 
       
@@ -135,23 +151,19 @@ def common_parser():
                       help = "dry run...")
   parser.add_argument('-v','--verbose', action='store_true', dest='verbose', required = False, 
                       help = "Set as verbose output.")
+  parser.add_argument('-n','--name', action='store', dest='name', required = True,
+                    help = "The name of the vm.")
   return parser
 
 def vm_create_parser():
   parser = argparse.ArgumentParser(description = '', add_help = False,  formatter_class=get_argparser_formatter())
-  parser.add_argument('-n','--name', action='store', dest='name', required = True,
-                    help = "The name of the vm.")
   return [common_parser(),parser]
 
 def vm_destroy_parser():
   parser = argparse.ArgumentParser(description = '', add_help = False,  formatter_class=get_argparser_formatter())
-  parser.add_argument('-n','--name', action='store', dest='name', required = True,
-                    help = "The name of the vm.")
   return [common_parser(),parser] 
   
 def vm_ping_parser():
   parser = argparse.ArgumentParser(description = '', add_help = False,  formatter_class=get_argparser_formatter())
-  parser.add_argument('-n','--name', action='store', dest='name', required = True,
-                    help = "The name of the vm.")
   return [common_parser(),parser] 
 

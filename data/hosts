@@ -10,7 +10,7 @@ login-server ansible_host=146.164.147.5 ansible_user=cluster ansible_password=$C
 
 [gpu]
 caloba-v01 ansible_host=10.1.1.101 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
-caloba-v02 ansible_host=10.1.1.102 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
+#caloba-v02 ansible_host=10.1.1.102 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
 caloba-v03 ansible_host=10.1.1.103 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
 caloba-v04 ansible_host=10.1.1.104 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
 caloba-v05 ansible_host=10.1.1.105 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY

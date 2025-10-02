@@ -26,7 +26,7 @@
     "images":{
         "paths" : {
             "cpu":"/mnt/pve/storage02/dump/vzdump-qemu-351-2025_09_21-21_22_25.vma.zst", 
-            "gpu":"/mnt/pve/storage02/dump/vzdump-qemu-351-2025_09_21-21_22_25.vma.zst"
+            "gpu":"/mnt/pve/storage02/dump/vzdump-qemu-391-2025_09_22-14_48_48.vma.zst"
         },
         "hostname": "slurm-node"
     },
@@ -41,7 +41,8 @@
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba51",
-                "image"     : "cpu"
+                "image"     : "cpu",
+                "pci"       : ""
             },
             "caloba52":{
                 "host"      : "caloba-v14",
@@ -52,7 +53,8 @@
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba52",
-                "image"     : "cpu"
+                "image"     : "cpu",
+                "pci"       : ""
 
             },
             "caloba53":{
@@ -64,7 +66,8 @@
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba53",
-                "image"     : "cpu"
+                "image"     : "cpu",
+                "pci"       : ""
 
             },
             "caloba54":{
@@ -76,7 +79,8 @@
                 "memory_mb" : 128000,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba54",
-                "image"     : "cpu"
+                "image"     : "cpu",
+                "pci"       : ""
             },
             "caloba71":{
                 "host"      : "caloba-v01",
@@ -87,7 +91,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba71",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
 
             },
             "caloba72":{
@@ -99,7 +104,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba72",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:03:00"
 
             },
             "caloba73":{
@@ -111,7 +117,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba73",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
             },
             "caloba74":{
                 "host"      : "caloba-v02",
@@ -122,7 +129,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba74",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:03:00"
             },
             "caloba75":{
                 "host"      : "caloba-v03",
@@ -133,7 +141,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba75",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
             },
             "caloba76":{
                 "host"      : "caloba-v03",
@@ -144,7 +153,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba76",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:03:00"
             },
             "caloba77":{
                 "host"      : "caloba-v04",
@@ -155,7 +165,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba77",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : ""
             },
             "caloba78":{
                 "host"      : "caloba-v04",
@@ -166,7 +177,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba78",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:03:00"
             },
             "caloba79":{
                 "host"      : "caloba-v05",
@@ -177,7 +189,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba79",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
             },
             "caloba80":{
                 "host"      : "caloba-v05",
@@ -188,7 +201,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba80",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:03:00"
             },
             "caloba91":{
                 "host"      : "caloba-v08",
@@ -199,7 +213,8 @@
                 "memory_mb" : 20480,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba91",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
             },
             "caloba92":{
                 "host"      : "caloba-v08",
@@ -210,7 +225,8 @@
                 "memory_mb" : 20480,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba92",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:02:00"
             },
             "caloba93":{
                 "host"      : "caloba-v09",
@@ -221,7 +237,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba93",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
             },
             "caloba94":{
                 "host"      : "caloba-v09",
@@ -232,7 +249,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba94",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:05:00"
             },
             "caloba95":{
                 "host"      : "caloba-v10",
@@ -243,7 +261,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba95",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
             },
             "caloba96":{
                 "host"      : "caloba-v10",
@@ -254,7 +273,8 @@
                 "memory_mb" : 30720,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba96",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:05:00"
             },
             "caloba97":{
                 "host"      : "caloba-v11",
@@ -265,10 +285,9 @@
                 "memory_mb" : 61440,
                 "storage"   : "storage02",
                 "vm_name"    : "caloba97",
-                "image"     : "gpu"
+                "image"     : "gpu",
+                "pci"       : "0000:01:00"
             }
-
-
         }
     
 }

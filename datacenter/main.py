@@ -1,14 +1,30 @@
 #!/bin/python
 
 import argparse
-import sys
+import sys, re
 
 from datacenter                   import get_argparser_formatter
 from datacenter.proxmox.cluster   import Cluster, cluster_create_parser, cluster_destroy_parser, cluster_reboot_parser, cluster_ping_parser
 from datacenter.proxmox.vm        import VM, vm_create_parser, vm_destroy_parser,  vm_ping_parser
 
-def create_vm(args) -> VM:
-  return VM( args.name, 
+
+
+def convert_string_to_range(s):
+     """
+       convert 0-2,20 to [0,1,2,20]
+     """
+     return sum((i if len(i) == 1 else list(range(i[0], i[1]+1))
+                for i in ([int(j) for j in i if j] for i in
+                re.findall(r'(\d+),?(?:-(\d+))?', s))), [])
+
+
+def convert_name_in_list(s):
+  name = re.match(r'([a-zA-Z]+)', s).group(1)
+  return [ name+str(idx) for idx in convert_string_to_range(s)]
+
+
+def create_vm(name : str, args) -> VM:
+  return VM( name, 
              dry_run=args.dry_run,
              verbose=args.verbose)
   
@@ -52,13 +68,18 @@ def run_parser(args):
         elif args.option == "ping":
           cluster.ping()
     elif args.mode == "vm":
-        vm = create_vm(args)
-        if args.option == "create":
-            vm.create()
-        elif args.option == "destroy":
-            vm.destroy()
-        elif args.option == "ping":
-          vm.ping()
+
+        names = convert_name_in_list(args.name)
+        print(names)
+        for name in names:
+          print(name)
+          vm = create_vm(name, args)
+          if args.option == "create":
+              vm.create()
+          elif args.option == "destroy":
+              vm.destroy()
+          elif args.option == "ping":
+            vm.ping()
     
       
 
