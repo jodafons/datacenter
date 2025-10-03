@@ -98,6 +98,10 @@ Is responsible to hold all proxmox backup staff. Is physically located at `10.1.
 
 Not available yet
 
+## Links and accounts (restrict access):
+
+[Links and Accounts](https://docs.google.com/spreadsheets/d/1PbJojKlb6sLdSm6FM86nqfK1CWD7uEgIkNA54eypAy0/edit?usp=sharing)
+
 
 -----
 
