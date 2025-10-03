@@ -1,6 +1,6 @@
 # 🚀 HPC Infrastructure Documentation
 
-This repository contains documentation and installation scripts for our HPC [infrastructure](docs/Infrastructure.md). The documentation is organized into logical groups to help you find what you need quickly.
+This repository contains documentation and installation scripts for our HPC [infrastructure](../docs/Infrastructure.md). The documentation is organized into logical groups to help you find what you need quickly.
 
 
 

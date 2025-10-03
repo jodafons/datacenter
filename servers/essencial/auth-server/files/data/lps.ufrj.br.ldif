@@ -1,0 +1,2079 @@
+dn: dc=lps,dc=ufrj,dc=br
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: lps.ufrj.br
+dc: lps
+structuralObjectClass: organization
+entryUUID: 78aff770-dfb7-103c-9a50-87cd4dc6b870
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014025557Z
+entryCSN: 20221014025557.444640Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014025557Z
+
+dn: ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: organizationalUnit
+ou: People
+structuralObjectClass: organizationalUnit
+entryUUID: 07c12538-dfb8-103c-8693-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014025957Z
+entryCSN: 20221014025957.471421Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014025957Z
+
+dn: ou=group,dc=lps,dc=ufrj,dc=br
+objectClass: organizationalUnit
+ou: group
+structuralObjectClass: organizationalUnit
+entryUUID: 07c1b23c-dfb8-103c-8694-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014025957Z
+entryCSN: 20221014025957.475044Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014025957Z
+
+dn: cn=lps,ou=group,dc=lps,dc=ufrj,dc=br
+objectClass: posixGroup
+gidNumber: 10000
+cn: lps
+structuralObjectClass: posixGroup
+entryUUID: 2b871cca-dfb8-103c-8695-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014030057Z
+entryCSN: 20221014030057.489085Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014030057Z
+
+dn: cn=Joao Victor Da Fonseca Pinto,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/joao.pinto
+uid: joao.pinto
+cn: Joao Victor Da Fonseca Pinto
+uidNumber: 10000
+gidNumber: 10000
+sn: Da Fonseca Pinto
+givenName: Joao Victor
+structuralObjectClass: inetOrgPerson
+entryUUID: 4390f278-dfb8-103c-8696-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014030137Z
+entryCSN: 20221014030137.818857Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014030137Z
+
+dn: cn=Micael Verissimo,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/micael.verissimo
+uid: micael.verissimo
+cn: Micael Verissimo
+uidNumber: 10001
+gidNumber: 10000
+sn: Verissimo
+givenName: Micael
+structuralObjectClass: inetOrgPerson
+entryUUID: de15aa14-dfb8-103c-8697-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014030557Z
+entryCSN: 20221014030557.057759Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014030557Z
+
+dn: cn=Rodrigo Coura Torres,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/rodrigo.torres
+uid: rodrigo.torres
+cn: Rodrigo Coura Torres
+uidNumber: 10002
+gidNumber: 10000
+sn: Coura Torres
+givenName: Rodrigo
+structuralObjectClass: inetOrgPerson
+entryUUID: f3f90380-dfb8-103c-8698-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014030633Z
+entryCSN: 20221014030633.779870Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014030633Z
+
+dn: cn=Natanael Moura Junior,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/natanael.junior
+uid: natanael.junior
+cn: Natanael Moura Junior
+uidNumber: 10003
+gidNumber: 10000
+sn: Moura Junior
+givenName: Natanael
+structuralObjectClass: inetOrgPerson
+entryUUID: 06f779d0-dfb9-103c-8699-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014030705Z
+entryCSN: 20221014030705.646501Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014030705Z
+
+dn: cn=Gabriel Milan,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/gabriel.milan
+uid: gabriel.milan
+cn: Gabriel Milan
+uidNumber: 10004
+gidNumber: 10000
+sn: Milan
+givenName: Gabriel
+structuralObjectClass: inetOrgPerson
+entryUUID: 2bb606e2-dfb9-103c-869a-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014030807Z
+entryCSN: 20221014030807.293275Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014030807Z
+
+dn: cn=Phillipp Gaspar,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/philipp.gaspar
+uid: philipp.gaspar
+cn: Phillipp Gaspar
+uidNumber: 10007
+gidNumber: 10000
+sn: Gaspar
+givenName: Phillipp
+structuralObjectClass: inetOrgPerson
+entryUUID: 6d1f9f58-dfb9-103c-869b-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014030957Z
+entryCSN: 20221014030957.037209Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014030957Z
+
+dn: cn=Edmar Souza,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/edmar.souza
+uid: edmar.souza
+cn: Edmar Souza
+uidNumber: 10008
+gidNumber: 10000
+sn: Souza
+givenName: Edmar
+structuralObjectClass: inetOrgPerson
+entryUUID: 82a035fe-dfb9-103c-869c-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031033Z
+entryCSN: 20221014031033.112080Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031033Z
+
+dn: cn=Juan Marin,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/juan.marin
+uid: juan.marin
+cn: Juan Marin
+uidNumber: 10009
+gidNumber: 10000
+sn: Marin
+givenName: Juan
+structuralObjectClass: inetOrgPerson
+entryUUID: 9ca45066-dfb9-103c-869d-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031116Z
+entryCSN: 20221014031116.759732Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031116Z
+
+dn: cn=Otto Tavares,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/otto.tavares
+uid: otto.tavares
+cn: Otto Tavares
+uidNumber: 10010
+gidNumber: 10000
+sn: Tavares
+givenName: Otto
+structuralObjectClass: inetOrgPerson
+entryUUID: b98d8cce-dfb9-103c-869e-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031205Z
+entryCSN: 20221014031205.264473Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031205Z
+
+dn: cn=Regina Alves,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/regina.alves
+uid: regina.alves
+cn: Regina Alves
+uidNumber: 10012
+gidNumber: 10000
+sn: Alves
+givenName: Regina
+structuralObjectClass: inetOrgPerson
+entryUUID: d0b75c5e-dfb9-103c-869f-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031244Z
+entryCSN: 20221014031244.126080Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031244Z
+
+dn: cn=brics group,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/brics
+uid: brics
+cn: brics group
+uidNumber: 10013
+gidNumber: 10000
+sn: group
+givenName: brics
+structuralObjectClass: inetOrgPerson
+entryUUID: e30988aa-dfb9-103c-86a0-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031314Z
+entryCSN: 20221014031314.863598Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031314Z
+
+dn: cn=Isabella Ferreira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/isabella.ferreira
+uid: isabella.ferreira
+cn: Isabella Ferreira
+uidNumber: 10014
+gidNumber: 10000
+sn: Ferreira
+givenName: Isabella
+structuralObjectClass: inetOrgPerson
+entryUUID: f840e006-dfb9-103c-86a1-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031350Z
+entryCSN: 20221014031350.458436Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031350Z
+
+dn: cn=Pedro Lima,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.lima
+uid: pedro.lima
+cn: Pedro Lima
+uidNumber: 10016
+gidNumber: 10000
+sn: Lima
+givenName: Pedro
+structuralObjectClass: inetOrgPerson
+entryUUID: 1b7f2b9a-dfba-103c-86a3-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031449Z
+entryCSN: 20221014031449.586951Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031449Z
+
+dn: cn=Marcia Begalli,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/marcia.begalli
+uid: marcia.begalli
+cn: Marcia Begalli
+uidNumber: 10018
+gidNumber: 10000
+sn: Begalli
+givenName: Marcia
+structuralObjectClass: inetOrgPerson
+entryUUID: 3b854d0c-dfba-103c-86a4-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031543Z
+entryCSN: 20221014031543.314220Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031543Z
+
+dn: cn=Yara Coutinho,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/yara.coutinho
+uid: yara.coutinho
+cn: Yara Coutinho
+uidNumber: 10019
+gidNumber: 10000
+sn: Coutinho
+givenName: Yara
+structuralObjectClass: inetOrgPerson
+entryUUID: 4b5a3a9e-dfba-103c-86a5-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031609Z
+entryCSN: 20221014031609.875488Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031609Z
+
+dn: cn=Julya Tonon,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/julya.tonon
+uid: julya.tonon
+cn: Julya Tonon
+uidNumber: 10020
+gidNumber: 10000
+sn: Tonon
+givenName: Julya
+structuralObjectClass: inetOrgPerson
+entryUUID: 64873ed6-dfba-103c-86a6-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031652Z
+entryCSN: 20221014031652.113549Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031652Z
+
+dn: cn=Marvin Durao,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/marvin.durao
+uid: marvin.durao
+cn: Marvin Durao
+uidNumber: 10021
+gidNumber: 10000
+sn: Durao
+givenName: Marvin
+structuralObjectClass: inetOrgPerson
+entryUUID: 7568fb86-dfba-103c-86a7-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031720Z
+entryCSN: 20221014031720.436484Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031720Z
+
+dn: cn=Vinicius Mello,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/vinicius.mello
+uid: vinicius.mello
+cn: Vinicius Mello
+uidNumber: 10024
+gidNumber: 10000
+sn: Mello
+givenName: Vinicius
+structuralObjectClass: inetOrgPerson
+entryUUID: 87c05d92-dfba-103c-86a8-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031751Z
+entryCSN: 20221014031751.208146Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031751Z
+
+dn: cn=Luiz Pereira Caloba,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/caloba
+uid: caloba
+cn: Luiz Pereira Caloba
+uidNumber: 10005
+gidNumber: 10000
+sn: Pereira Caloba
+givenName: Luiz
+structuralObjectClass: inetOrgPerson
+entryUUID: a3b3f22a-dfba-103c-86a9-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014031838Z
+entryCSN: 20221014031838.102959Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014031838Z
+
+dn: cn=Julio de Castro Vargas Fernandes,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/julio.fernandes
+uid: julio.fernandes
+cn: Julio de Castro Vargas Fernandes
+uidNumber: 10006
+gidNumber: 10000
+sn: de Castro Vargas Fernandes
+givenName: Julio
+structuralObjectClass: inetOrgPerson
+entryUUID: 02670140-dfbb-103c-86aa-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014032116Z
+entryCSN: 20221014032116.982269Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014032116Z
+
+dn: cn=Davi Araujo,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/davi.araujo
+uid: davi.araujo
+cn: Davi Araujo
+gidNumber: 10000
+sn: Araujo
+givenName: Davi
+structuralObjectClass: inetOrgPerson
+entryUUID: 2a010b74-dfbb-103c-86ab-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014032223Z
+uidNumber: 10011
+entryCSN: 20221014032246.019730Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014032246Z
+
+dn: cn=Pedro Busin,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.busin
+uid: pedro.busin
+cn: Pedro Busin
+gidNumber: 10000
+sn: Busin
+givenName: Pedro
+structuralObjectClass: inetOrgPerson
+entryUUID: 489668c2-dfbb-103c-86ac-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014032314Z
+uidNumber: 10017
+entryCSN: 20221014032330.520031Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014032330Z
+
+dn: cn=Werner Freund,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/werner.freund
+uid: werner.freund
+cn: Werner Freund
+uidNumber: 10022
+gidNumber: 10000
+sn: Freund
+givenName: Werner
+structuralObjectClass: inetOrgPerson
+entryUUID: 95507fb8-dfbb-103c-86ad-87a24eabb635
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014032523Z
+entryCSN: 20221014032523.459849Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014032523Z
+
+dn: cn=Hellen Oliveira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/hellen.oliveira
+uid: hellen.oliveira
+cn: Hellen Oliveira
+uidNumber: 10025
+gidNumber: 10000
+sn: Oliveira
+givenName: Hellen
+structuralObjectClass: inetOrgPerson
+entryUUID: 51e9488c-e03c-103c-9bcb-296ed2bd2393
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221014184655Z
+entryCSN: 20221014184655.454176Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221014184655Z
+
+dn: cn=Andre de Farias Pereira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/andre.pereira
+uid: andre.pereira
+cn: Andre de Farias Pereira
+uidNumber: 10026
+gidNumber: 10000
+sn: de Farias Pereira
+givenName: Andre
+structuralObjectClass: inetOrgPerson
+entryUUID: 48e611f0-ec0a-103c-9d76-8956af4fbcf4
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221029191859Z
+entryCSN: 20221029191859.450476Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221029191859Z
+
+dn: cn=Marina Sangineto Juca,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/marina.juca
+uid: marina.juca
+cn: Marina Sangineto Juca
+uidNumber: 10027
+gidNumber: 10000
+sn: Sangineto Juca
+givenName: Marina
+structuralObjectClass: inetOrgPerson
+entryUUID: ce288496-ec0b-103c-9d77-8956af4fbcf4
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221029192952Z
+entryCSN: 20221029192952.519660Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221029192952Z
+
+dn: cn=Vitoria da Silva Thomaz Cavalleiro,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/vitoria.cavalleiro
+uid: vitoria.cavalleiro
+cn: Vitoria da Silva Thomaz Cavalleiro
+uidNumber: 10028
+gidNumber: 10000
+sn: da Silva Thomaz Cavalleiro
+givenName: Vitoria
+structuralObjectClass: inetOrgPerson
+entryUUID: 9ef3c65c-ec0d-103c-9d78-8956af4fbcf4
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221029194252Z
+entryCSN: 20221029194252.314548Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221029194252Z
+
+dn: cn=Carlos Cardoso Dias,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/carlos.dias
+uid: carlos.dias
+cn: Carlos Cardoso Dias
+uidNumber: 10029
+gidNumber: 10000
+sn: Cardoso Dias
+givenName: Carlos
+structuralObjectClass: inetOrgPerson
+entryUUID: 89d243de-02a1-103d-933e-25b2cfe99653
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221127131707Z
+entryCSN: 20221127131707.959859Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221127131707Z
+
+dn: cn=Lucas Nunes,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/lucas.nunes
+uid: lucas.nunes
+cn: Lucas Nunes
+uidNumber: 10030
+gidNumber: 10000
+sn: Nunes
+givenName: Lucas
+structuralObjectClass: inetOrgPerson
+entryUUID: eafe339c-0b62-103d-9cc6-6b2af1c3cfc4
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221208164133Z
+entryCSN: 20221208164133.157830Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221208164133Z
+
+dn: cn=Meinrad Schefer,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/meinrad.schefer
+uid: meinrad.schefer
+cn: Meinrad Schefer
+uidNumber: 10031
+gidNumber: 10000
+sn: Schefer
+givenName: Meinrad
+structuralObjectClass: inetOrgPerson
+entryUUID: b7b9a02a-1012-103d-9cc7-6b2af1c3cfc4
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221214155003Z
+entryCSN: 20221214155003.220143Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221214155003Z
+
+dn: cn=Fernando Marciano,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/fernando.marciano
+uid: fernando.marciano
+cn: Fernando Marciano
+uidNumber: 10032
+gidNumber: 10000
+sn: Marciano
+givenName: Fernando
+structuralObjectClass: inetOrgPerson
+entryUUID: e605d216-101a-103d-9cc8-6b2af1c3cfc4
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20221214164836Z
+entryCSN: 20221214164836.868525Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20221214164836Z
+
+dn: cn=Alexandre Ferreira Oliveira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/alexandre.oliveira
+uid: alexandre.oliveira
+cn: Alexandre Ferreira Oliveira
+uidNumber: 10033
+gidNumber: 10000
+sn: Ferreira Oliveira
+givenName: Alexandre
+structuralObjectClass: inetOrgPerson
+entryUUID: efed19fa-2538-103d-9954-efb157a19382
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230110134632Z
+entryCSN: 20230110134632.803944Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230110134632Z
+
+dn: cn=Diego Rodrigues,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/diego.rodrigues
+uid: diego.rodrigues
+cn: Diego Rodrigues
+uidNumber: 10034
+gidNumber: 10000
+sn: Rodrigues
+givenName: Diego
+structuralObjectClass: inetOrgPerson
+entryUUID: 9168939a-2539-103d-9955-efb157a19382
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230110135103Z
+entryCSN: 20230110135103.726342Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230110135103Z
+
+dn:: Y249UGVkcm8gU8OpcmdpbyBUw7RycmVzIEZpZ3VlaXJlZG8gU2lsdmEsb3U9UGVvcGxlLGR
+ jPWxwcyxkYz11ZnJqLGRjPWJy
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.silva
+uid: pedro.silva
+cn:: UGVkcm8gU8OpcmdpbyBUw7RycmVzIEZpZ3VlaXJlZG8gU2lsdmE=
+uidNumber: 10035
+gidNumber: 10000
+sn:: U8OpcmdpbyBUw7RycmVzIEZpZ3VlaXJlZG8gU2lsdmE=
+givenName: Pedro
+structuralObjectClass: inetOrgPerson
+entryUUID: 93e49854-27db-103d-9956-efb157a19382
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230113221548Z
+entryCSN: 20230113221548.690303Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230113221548Z
+
+dn:: Y249Q2Vjw61saWEgQ29zdGEsb3U9UGVvcGxlLGRjPWxwcyxkYz11ZnJqLGRjPWJy
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/cecilia.costa
+uid: cecilia.costa
+cn:: Q2Vjw61saWEgQ29zdGE=
+uidNumber: 10036
+gidNumber: 10000
+sn: Costa
+givenName:: Q2Vjw61saWE=
+structuralObjectClass: inetOrgPerson
+entryUUID: 7486ceac-2fc7-103d-9780-ad4ce722a86c
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230124001155Z
+entryCSN: 20230124001155.433905Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230124001155Z
+
+dn: cn=Victor Assis,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/victor.assis
+uid: victor.assis
+cn: Victor Assis
+uidNumber: 10037
+gidNumber: 10000
+sn: Assis
+givenName: Victor
+structuralObjectClass: inetOrgPerson
+entryUUID: e7db450e-2fc7-103d-9781-ad4ce722a86c
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230124001508Z
+entryCSN: 20230124001508.925432Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230124001508Z
+
+dn: cn=Jose Manoel de Seixas,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/seixas
+uid: seixas
+cn: Jose Manoel de Seixas
+uidNumber: 10038
+gidNumber: 10000
+structuralObjectClass: inetOrgPerson
+entryUUID: e6b97f64-361c-103d-8000-fdc47884743b
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230201013841Z
+sn: Seixas
+givenName:: Sm9zw6kgTWFub2VsIGRl
+entryCSN: 20230201014213.426970Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230201014213Z
+
+dn: cn=Luiz Eduardo Balabram Filho,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/luiz.filho
+uid: luiz.filho
+cn: Luiz Eduardo Balabram Filho
+uidNumber: 10039
+gidNumber: 10000
+sn: Balabram Filho
+givenName: Luiz Eduardo
+structuralObjectClass: inetOrgPerson
+entryUUID: cc52a81e-4e0c-103d-8003-fdc47884743b
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230303124352Z
+entryCSN: 20230303124352.889312Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230303124352Z
+
+dn: cn=Thiago Ciodaro Xavier,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/thiago.xavier
+uid: thiago.xavier
+cn: Thiago Ciodaro Xavier
+uidNumber: 10040
+gidNumber: 10000
+sn: Ciodaro Xavier
+givenName: Thiago
+structuralObjectClass: inetOrgPerson
+entryUUID: fd49b5ea-6f52-103d-9f05-57005cb6f007
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230414205928Z
+entryCSN: 20230414205928.181758Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230414205928Z
+
+dn: cn=Eduardo Simas,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/eduardo.simas
+uid: eduardo.simas
+cn: Eduardo Simas
+uidNumber: 10041
+gidNumber: 10000
+sn: Simas
+givenName: Eduardo
+structuralObjectClass: inetOrgPerson
+entryUUID: 2bbc0d92-6f53-103d-9f06-57005cb6f007
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230414210046Z
+entryCSN: 20230414210046.106322Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230414210046Z
+
+dn: cn=Jeferson Oliveira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/jeferson.oliveira
+uid: jeferson.oliveira
+cn: Jeferson Oliveira
+uidNumber: 10042
+gidNumber: 10000
+sn: Oliveira
+givenName: Jeferson
+structuralObjectClass: inetOrgPerson
+entryUUID: 559602c6-6f53-103d-9f07-57005cb6f007
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230414210156Z
+entryCSN: 20230414210156.321316Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230414210156Z
+
+dn: cn=Leandro Assis dos Santos,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/leandro.santos
+uid: leandro.santos
+cn: Leandro Assis dos Santos
+uidNumber: 10043
+gidNumber: 10000
+sn: Assis dos Santos
+givenName: Leandro
+structuralObjectClass: inetOrgPerson
+entryUUID: 9b9883b6-6f53-103d-9f08-57005cb6f007
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230414210353Z
+entryCSN: 20230414210353.778236Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230414210353Z
+
+dn:: Y249SmVmZmVyc29uIEhvcsOhY2lvLG91PVBlb3BsZSxkYz1scHMsZGM9dWZyaixkYz1icg=
+ =
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/jefferson.horacio
+uid: jefferson.horacio
+cn:: SmVmZmVyc29uIEhvcsOhY2lv
+uidNumber: 10044
+gidNumber: 10000
+sn:: SG9yw6FjaW8=
+givenName: Jefferson
+structuralObjectClass: inetOrgPerson
+entryUUID: 4cfc29bc-73e8-103d-9f09-57005cb6f007
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230420165821Z
+entryCSN: 20230420165821.555106Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230420165821Z
+
+dn: cn=Matheus Ferreira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/matheus.ferreira
+uid: matheus.ferreira
+cn: Matheus Ferreira
+uidNumber: 10045
+gidNumber: 10000
+sn: Ferreira
+givenName: Matheus
+structuralObjectClass: inetOrgPerson
+entryUUID: 6da90c6c-73f1-103d-9f0a-57005cb6f007
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230420180341Z
+entryCSN: 20230420180341.845787Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230420180341Z
+
+dn: cn=Fabio Oliveira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/fabio.oliveira
+uid: fabio.oliveira
+cn: Fabio Oliveira
+uidNumber: 10046
+gidNumber: 10000
+sn: Oliveira
+givenName: Fabio
+structuralObjectClass: inetOrgPerson
+entryUUID: 7fe78fca-73f1-103d-9f0b-57005cb6f007
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230420180412Z
+entryCSN: 20230420180412.454462Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230420180412Z
+
+dn: cn=Projeto Sonar,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/sonar
+uid: sonar
+cn: Projeto Sonar
+uidNumber: 10047
+gidNumber: 10000
+sn: Sonar
+givenName: Projeto
+structuralObjectClass: inetOrgPerson
+entryUUID: 48b96264-88fd-103d-930a-9728fe6d3fdf
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230517125128Z
+entryCSN: 20230517125128.256213Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230517125128Z
+
+dn:: Y249WcOhLVNpbiBCYXJjZWxvcyBNZ2hhemxpLG91PVBlb3BsZSxkYz1scHMsZGM9dWZyaix
+ kYz1icg==
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/yasin.barcelos
+uid: yasin.barcelos
+cn:: WcOhLVNpbiBCYXJjZWxvcyBNZ2hhemxp
+uidNumber: 10048
+gidNumber: 10000
+sn: Barcelos Mghazli
+givenName:: WcOhLVNpbg==
+structuralObjectClass: inetOrgPerson
+entryUUID: 5674dd8c-8909-103d-930b-9728fe6d3fdf
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230517141745Z
+entryCSN: 20230517141745.256041Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230517141745Z
+
+dn: cn=Paulo Jorge Campos Cardoso,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/paulo.cardoso
+uid: paulo.cardoso
+cn: Paulo Jorge Campos Cardoso
+uidNumber: 10049
+gidNumber: 10000
+sn: Campos Cardoso
+givenName: Paulo Jorge
+structuralObjectClass: inetOrgPerson
+entryUUID: 3f4fd434-95ae-103d-958b-01b60bbdc1f9
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230602162827Z
+entryCSN: 20230602162827.339418Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230602162827Z
+
+dn:: Y249Sm/Do28gVml0b3IgZGUgU291c2EgQWJyZXUsb3U9UGVvcGxlLGRjPWxwcyxkYz11ZnJ
+ qLGRjPWJy
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/joao.abreu
+uid: joao.abreu
+cn:: Sm/Do28gVml0b3IgZGUgU291c2EgQWJyZXU=
+uidNumber: 10050
+gidNumber: 10000
+sn: de Sousa Abreu
+givenName:: Sm/Do28gVml0b3I=
+structuralObjectClass: inetOrgPerson
+entryUUID: ce62f3a4-95ae-103d-958c-01b60bbdc1f9
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230602163227Z
+entryCSN: 20230602163227.378951Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230602163227Z
+
+dn: cn=Pedro Lisboa,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.lisboa
+uid: pedro.lisboa
+cn: Pedro Lisboa
+uidNumber: 10051
+gidNumber: 10000
+sn: Lisboa
+givenName: Pedro
+structuralObjectClass: inetOrgPerson
+entryUUID: 2b9e8ef0-95bb-103d-958d-01b60bbdc1f9
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230602180057Z
+entryCSN: 20230602180057.758450Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230602180057Z
+
+dn: cn=Jaime Vicente da Silva Junior,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/jaime.junior
+uid: jaime.junior
+cn: Jaime Vicente da Silva Junior
+uidNumber: 10052
+gidNumber: 10000
+sn: Vicente da Silva Junior
+givenName: Jaime
+structuralObjectClass: inetOrgPerson
+entryUUID: e6dc4bc8-95c3-103d-958e-01b60bbdc1f9
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230602190327Z
+entryCSN: 20230602190327.870833Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230602190327Z
+
+dn: cn=Victor Mommalier,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/victor.mommalier
+uid: victor.mommalier
+cn: Victor Mommalier
+uidNumber: 10053
+gidNumber: 10000
+sn: Mommalier
+givenName: Victor
+structuralObjectClass: inetOrgPerson
+entryUUID: def8e90a-a0b5-103d-91a3-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230616172044Z
+entryCSN: 20230616172044.472908Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230616172044Z
+
+dn: cn=Heitor Polycarpo Macedo,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/heitor.macedo
+uid: heitor.macedo
+cn: Heitor Polycarpo Macedo
+uidNumber: 10054
+gidNumber: 10000
+sn: Polycarpo Macedo
+givenName: Heitor
+structuralObjectClass: inetOrgPerson
+entryUUID: cdb0deac-a559-103d-91a4-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230622150417Z
+entryCSN: 20230622150417.594298Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230622150417Z
+
+dn: cn=Antonioni Campos,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/antonioni.campos
+uid: antonioni.campos
+cn: Antonioni Campos
+uidNumber: 10055
+gidNumber: 10000
+sn: Campos
+givenName: Antonioni
+structuralObjectClass: inetOrgPerson
+entryUUID: 034a4998-ca64-103d-91a6-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230808182035Z
+entryCSN: 20230808182035.509049Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230808182035Z
+
+dn:: Y249Q1BFODgzIFRvcGljb3MgRXNwZWNpYWlzIGVtIEFwcmVuZGl6YWRvIGRlIE3DoXF1aW5
+ hLG91PVBlb3BsZSxkYz1scHMsZGM9dWZyaixkYz1icg==
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/CPE883
+uid: CPE883
+cn:: Q1BFODgzIFRvcGljb3MgRXNwZWNpYWlzIGVtIEFwcmVuZGl6YWRvIGRlIE3DoXF1aW5h
+uidNumber: 10056
+gidNumber: 10000
+sn:: VG9waWNvcyBFc3BlY2lhaXMgZW0gQXByZW5kaXphZG8gZGUgTcOhcXVpbmE=
+givenName: CPE883
+structuralObjectClass: inetOrgPerson
+entryUUID: 7b3e8784-ca64-103d-91a7-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230808182356Z
+entryCSN: 20230808182356.758582Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230808182356Z
+
+dn: cn=Ellizeu Rodrigues Sena,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/ellizeu.sena
+uid: ellizeu.sena
+cn: Ellizeu Rodrigues Sena
+uidNumber: 10057
+gidNumber: 10000
+sn: Rodrigues Sena
+givenName: Ellizeu
+structuralObjectClass: inetOrgPerson
+entryUUID: 2ca123cc-cb02-103d-91a8-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230809131245Z
+entryCSN: 20230809131245.348106Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230809131245Z
+
+dn: cn=Miguel Fernandes de Sousa,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/miguel.sousa
+uid: miguel.sousa
+cn: Miguel Fernandes de Sousa
+uidNumber: 10058
+gidNumber: 10000
+sn: Fernandes de Sousa
+givenName: Miguel
+structuralObjectClass: inetOrgPerson
+entryUUID: 4586553e-d0bf-103d-91a9-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230816202857Z
+entryCSN: 20230816202857.811245Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230816202857Z
+
+dn: cn=Leonardo Mira Marins,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/leonardo.marins
+uid: leonardo.marins
+cn: Leonardo Mira Marins
+uidNumber: 10059
+gidNumber: 10000
+sn: Mira Marins
+givenName: Leonardo
+structuralObjectClass: inetOrgPerson
+entryUUID: 9d6e637e-d167-103d-91aa-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230817163400Z
+entryCSN: 20230817163400.744398Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230817163400Z
+
+dn: cn=Rafaella Lenzi Romano,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/rafaella.romano
+uid: rafaella.romano
+cn: Rafaella Lenzi Romano
+uidNumber: 10060
+gidNumber: 10000
+sn: Lenzi Romano
+givenName: Rafaella
+structuralObjectClass: inetOrgPerson
+entryUUID: 94bd6624-d169-103d-91ab-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230817164805Z
+entryCSN: 20230817164805.156168Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230817164805Z
+
+dn:: Y249R2FicmllbCBNYXLDp2FsIE1lbmRvbsOnYSxvdT1QZW9wbGUsZGM9bHBzLGRjPXVmcmo
+ sZGM9YnI=
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/gabriel.mendonca
+uid: gabriel.mendonca
+cn:: R2FicmllbCBNYXLDp2FsIE1lbmRvbsOnYQ==
+uidNumber: 10061
+gidNumber: 10000
+sn:: TWFyw6dhbCBNZW5kb27Dp2E=
+givenName: Gabriel
+structuralObjectClass: inetOrgPerson
+entryUUID: 543ff808-d16b-103d-91ac-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230817170035Z
+entryCSN: 20230817170035.953425Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230817170035Z
+
+dn:: Y249THXDrXMgR3VpbGhlcm1lIE5lcmkgRmVycmVpcmEsb3U9UGVvcGxlLGRjPWxwcyxkYz1
+ 1ZnJqLGRjPWJy
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/luis.ferreira
+uid: luis.ferreira
+cn:: THXDrXMgR3VpbGhlcm1lIE5lcmkgRmVycmVpcmE=
+uidNumber: 10062
+gidNumber: 10000
+sn: Neri Ferreira
+givenName:: THXDrXMgR3VpbGhlcm1l
+structuralObjectClass: inetOrgPerson
+entryUUID: 7439afb2-d16d-103d-91ad-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230817171548Z
+entryCSN: 20230817171548.592802Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230817171548Z
+
+dn: cn=Gabriel Henrique Braga Lisboa,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/gabriel.lisboa
+uid: gabriel.lisboa
+cn: Gabriel Henrique Braga Lisboa
+uidNumber: 10063
+gidNumber: 10000
+sn: Braga Lisboa
+givenName: Gabriel Henrique
+structuralObjectClass: inetOrgPerson
+entryUUID: d4953982-d170-103d-91ae-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230817173958Z
+entryCSN: 20230817173958.744169Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230817173958Z
+
+dn: cn=Janot Brillard de Carvalho,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/janot.carvalho
+uid: janot.carvalho
+cn: Janot Brillard de Carvalho
+uidNumber: 10064
+gidNumber: 10000
+sn: Brillard de Carvalho
+givenName: Janot
+structuralObjectClass: inetOrgPerson
+entryUUID: 448dcc46-d53f-103d-91af-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230822135516Z
+entryCSN: 20230822135516.414947Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230822135516Z
+
+dn:: Y249UGVkcm8gSGVucmlxdWUgTW91cmEgRnJhbsOnYSxvdT1QZW9wbGUsZGM9bHBzLGRjPXV
+ mcmosZGM9YnI=
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.franca
+uid: pedro.franca
+cn:: UGVkcm8gSGVucmlxdWUgTW91cmEgRnJhbsOnYQ==
+uidNumber: 10065
+gidNumber: 10000
+sn:: TW91cmEgRnJhbsOnYQ==
+givenName: Pedro Henrique
+structuralObjectClass: inetOrgPerson
+entryUUID: 6a933bb4-d568-103d-91b0-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230822184949Z
+entryCSN: 20230822184949.569902Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230822184949Z
+
+dn:: Y249QW5kcsOpIEZyZWl0YXMgUGFjw61maWNvLG91PVBlb3BsZSxkYz1scHMsZGM9dWZyaix
+ kYz1icg==
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/andre.pacifico
+uid: andre.pacifico
+cn:: QW5kcsOpIEZyZWl0YXMgUGFjw61maWNv
+uidNumber: 10066
+gidNumber: 10000
+sn:: RnJlaXRhcyBQYWPDrWZpY28=
+givenName:: QW5kcsOp
+structuralObjectClass: inetOrgPerson
+entryUUID: a8fc392c-d62c-103d-91b1-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230823181435Z
+entryCSN: 20230823181435.635706Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230823181435Z
+
+dn: cn=Jorge Martins Esteves Neto,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/jorge.neto
+uid: jorge.neto
+cn: Jorge Martins Esteves Neto
+uidNumber: 10067
+gidNumber: 10000
+sn: Martins Esteves Neto
+givenName: Jorge
+structuralObjectClass: inetOrgPerson
+entryUUID: 2bdfeece-da06-103d-91b2-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230828154909Z
+entryCSN: 20230828154909.510485Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230828154909Z
+
+dn:: Y249UGVkcm8gQXJhZ8OjbyBEYW50YXMsb3U9UGVvcGxlLGRjPWxwcyxkYz11ZnJqLGRjPWJ
+ y
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.dantas
+uid: pedro.dantas
+cn:: UGVkcm8gQXJhZ8OjbyBEYW50YXM=
+uidNumber: 10068
+gidNumber: 10000
+sn:: QXJhZ8OjbyBEYW50YXM=
+givenName: Pedro
+structuralObjectClass: inetOrgPerson
+entryUUID: 40257b4c-da06-103d-91b3-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230828154943Z
+entryCSN: 20230828154943.520715Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230828154943Z
+
+dn: cn=Lucas Rodrigues Seraine,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/lucas.seraine
+uid: lucas.seraine
+cn: Lucas Rodrigues Seraine
+uidNumber: 10069
+gidNumber: 10000
+sn: Rodrigues Seraine
+givenName: Lucas
+structuralObjectClass: inetOrgPerson
+entryUUID: 5124bc32-da06-103d-91b4-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230828155012Z
+entryCSN: 20230828155012.037090Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230828155012Z
+
+dn:: Y249UGVkcm8gTMO6Y2lvIE1lbmRlcyBSb2NoYSBkb3MgU2FudG9zLG91PVBlb3BsZSxkYz1
+ scHMsZGM9dWZyaixkYz1icg==
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.santos
+uid: pedro.santos
+cn:: UGVkcm8gTMO6Y2lvIE1lbmRlcyBSb2NoYSBkb3MgU2FudG9z
+uidNumber: 10070
+gidNumber: 10000
+sn: Mendes Rocha dos Santos
+givenName:: UGVkcm8gTMO6Y2lv
+structuralObjectClass: inetOrgPerson
+entryUUID: 6be697d4-da06-103d-91b5-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230828155056Z
+entryCSN: 20230828155056.928319Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230828155056Z
+
+dn: cn=Paulo Victor Lima Ferreira,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/paulo.ferreira
+uid: paulo.ferreira
+cn: Paulo Victor Lima Ferreira
+uidNumber: 10071
+gidNumber: 10000
+sn: Lima Ferreira
+givenName: Paulo Victor
+structuralObjectClass: inetOrgPerson
+entryUUID: 83adb10e-da06-103d-91b6-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230828155136Z
+entryCSN: 20230828155136.820729Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230828155136Z
+
+dn: cn=Allan Oliveira da Silva dos Santos,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/allan.santos
+uid: allan.santos
+cn: Allan Oliveira da Silva dos Santos
+uidNumber: 10072
+gidNumber: 10000
+sn: Oliveira da Silva dos Santos
+givenName: Allan
+structuralObjectClass: inetOrgPerson
+entryUUID: 94c93f9e-da06-103d-91b7-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230828155205Z
+entryCSN: 20230828155205.522592Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230828155205Z
+
+dn: cn=Matheus de Oliveira Gomes,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/matheus.gomes
+uid: matheus.gomes
+cn: Matheus de Oliveira Gomes
+uidNumber: 10073
+gidNumber: 10000
+sn: de Oliveira Gomes
+givenName: Matheus
+structuralObjectClass: inetOrgPerson
+entryUUID: a7978702-da06-103d-91b8-1d2ac7b07d6a
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20230828155237Z
+entryCSN: 20230828155237.073450Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20230828155237Z
+
+dn: cn=Julia Hespanhol Macedo de Medeiros,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/julia.medeiros
+uid: julia.medeiros
+cn: Julia Hespanhol Macedo de Medeiros
+uidNumber: 10074
+gidNumber: 10000
+sn: Hespanhol Macedo de Medeiros
+givenName: Julia
+structuralObjectClass: inetOrgPerson
+entryUUID: 678fb4a0-27e9-103e-933e-7fafa767ff72
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20231205183944Z
+entryCSN: 20231205183944.939483Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20231205183944Z
+
+dn: cn=Sarita Rimes,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/sarita.rimes
+uid: sarita.rimes
+cn: Sarita Rimes
+uidNumber: 10075
+gidNumber: 10000
+sn: Rimes
+givenName: Sarita
+structuralObjectClass: inetOrgPerson
+entryUUID: 89c0955e-2c75-103e-98bd-85c45a9cf86e
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20231211133256Z
+entryCSN: 20231211133256.495602Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20231211133256Z
+
+dn:: Y249Sm/Do28gQmFwdGlzdGEgZGUgT2xpdmVpcmEgZSBTb3V6YSBGaWxobyxvdT1QZW9wbGU
+ sZGM9bHBzLGRjPXVmcmosZGM9YnI=
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/jbfilho
+uid: jbfilho
+cn:: Sm/Do28gQmFwdGlzdGEgZGUgT2xpdmVpcmEgZSBTb3V6YSBGaWxobw==
+uidNumber: 10076
+gidNumber: 10000
+sn: de Oliveira e Souza Filho
+givenName:: Sm/Do28gQmFwdGlzdGE=
+structuralObjectClass: inetOrgPerson
+entryUUID: 73ca89c8-6c3d-103e-94f0-b3a1030e19e3
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240301173242Z
+entryCSN: 20240301173242.251871Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240301173242Z
+
+dn: cn=Samarone Lima Santos Junior,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/samarone.lima
+uid: samarone.lima
+cn: Samarone Lima Santos Junior
+uidNumber: 10077
+gidNumber: 10000
+sn: Lima Santos Junior
+givenName: Samarone
+structuralObjectClass: inetOrgPerson
+entryUUID: b5464a66-74fa-103e-9e59-ff9c2eb8a44d
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240312202736Z
+entryCSN: 20240312202736.298920Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240312202736Z
+
+dn: cn=Carlos Guttemberg,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/carlos.guttemberg
+uid: carlos.guttemberg
+cn: Carlos Guttemberg
+uidNumber: 10078
+gidNumber: 10000
+sn: Guttemberg
+givenName: Carlos
+structuralObjectClass: inetOrgPerson
+entryUUID: 769428a0-74fb-103e-9e5a-ff9c2eb8a44d
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240312203300Z
+entryCSN: 20240312203300.609517Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240312203300Z
+
+dn: cn=Fernanda Duarte Vilela Reis de Oliveira,ou=People,dc=lps,dc=ufrj,dc=b
+ r
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/fernanda.oliveira
+uid: fernanda.oliveira
+cn: Fernanda Duarte Vilela Reis de Oliveira
+uidNumber: 10079
+gidNumber: 10000
+sn: Duarte Vilela Reis de Oliveira
+givenName: Fernanda
+structuralObjectClass: inetOrgPerson
+entryUUID: c27dd184-7a56-103e-8eeb-7d95a07022b0
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240319160907Z
+entryCSN: 20240319160907.986210Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240319160907Z
+
+dn: cn=Diego Zanon,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/diego.zanon
+uid: diego.zanon
+cn: Diego Zanon
+uidNumber: 10080
+gidNumber: 10000
+sn: Zanon
+givenName: Diego
+structuralObjectClass: inetOrgPerson
+entryUUID: 84b3f45c-9039-103e-907d-6faa93ecf0ad
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240416123514Z
+entryCSN: 20240416123514.498211Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240416123514Z
+
+dn: cn=Carlos Henrique Ferreira Brito Filho,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/carlos.brito
+uid: carlos.brito
+cn: Carlos Henrique Ferreira Brito Filho
+uidNumber: 10081
+gidNumber: 10000
+sn: Ferreira Brito Filho
+givenName: Carlos Henrique
+structuralObjectClass: inetOrgPerson
+entryUUID: 5ec46c94-9067-103e-907e-6faa93ecf0ad
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240416180327Z
+entryCSN: 20240416180327.702300Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240416180327Z
+
+dn: cn=Felipe Barreto Andrade,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/felipe.andrade
+uid: felipe.andrade
+cn: Felipe Barreto Andrade
+uidNumber: 10082
+gidNumber: 10000
+sn: Barreto Andrade
+givenName: Felipe
+structuralObjectClass: inetOrgPerson
+entryUUID: 9bc0903a-a03b-103e-9f65-6f062351aea4
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240506213030Z
+entryCSN: 20240506213030.766344Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240506213030Z
+
+dn: cn=Pedro Glaser De Senna,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.senna
+uid: pedro.senna
+cn: Pedro Glaser De Senna
+uidNumber: 10083
+gidNumber: 10000
+sn: Glaser De Senna
+givenName: Pedro
+structuralObjectClass: inetOrgPerson
+entryUUID: 01a16852-a672-103e-931e-2b67ff844829
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240514191501Z
+entryCSN: 20240514191501.489816Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240514191501Z
+
+dn: cn=Eduardo Daemon Teixeira do Santos,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/eduardo.daemon
+uid: eduardo.daemon
+cn: Eduardo Daemon Teixeira do Santos
+uidNumber: 10084
+gidNumber: 10000
+sn: Daemon Teixeira do Santos
+givenName: Eduardo
+structuralObjectClass: inetOrgPerson
+entryUUID: 958697e0-a672-103e-931f-2b67ff844829
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240514191909Z
+entryCSN: 20240514191909.616908Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240514191909Z
+
+dn: cn=Natan Gomes,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/natan.gomes
+uid: natan.gomes
+cn: Natan Gomes
+uidNumber: 10085
+gidNumber: 10000
+sn: Gomes
+givenName: Natan
+structuralObjectClass: inetOrgPerson
+entryUUID: d363acc2-bc59-103e-8d41-29fa640fbde8
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240611161721Z
+entryCSN: 20240611161721.569651Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240611161721Z
+
+dn:: Y249TGVvbmFyZG8gTnVuZXMgR3VpbWFyw6NlcyBDb3N0YSxvdT1QZW9wbGUsZGM9bHBzLGR
+ jPXVmcmosZGM9YnI=
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/leonardo.costa
+uid: leonardo.costa
+cn:: TGVvbmFyZG8gTnVuZXMgR3VpbWFyw6NlcyBDb3N0YQ==
+uidNumber: 10086
+gidNumber: 10000
+sn:: TnVuZXMgR3VpbWFyw6NlcyBDb3N0YQ==
+givenName: Leonardo
+structuralObjectClass: inetOrgPerson
+entryUUID: 58935d36-c374-103e-823c-590c5975956e
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240620171450Z
+entryCSN: 20240620171450.073577Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240620171450Z
+
+dn: cn=Matheus Hufnagel,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/matheus.hufnagel
+uid: matheus.hufnagel
+cn: Matheus Hufnagel
+uidNumber: 10087
+gidNumber: 10000
+sn: Hufnagel
+givenName: Matheus
+structuralObjectClass: inetOrgPerson
+entryUUID: e49e2e9e-d17c-103e-9b4d-2b80f34dbd6f
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240708135117Z
+entryCSN: 20240708135117.278220Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240708135117Z
+
+dn: cn=Ana Clara Loureiro Cruz,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/clara.cruz
+uid: clara.cruz
+cn: Ana Clara Loureiro Cruz
+uidNumber: 10088
+gidNumber: 10000
+sn: Loureiro Cruz
+givenName: Ana Clara
+structuralObjectClass: inetOrgPerson
+entryUUID: fbe3811e-eeb2-103e-88d0-afca02d26169
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240814180132Z
+entryCSN: 20240814180132.864073Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240814180132Z
+
+dn: cn=Victor Hugo Da Silva Muniz,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/victor.muniz
+uid: victor.muniz
+cn: Victor Hugo Da Silva Muniz
+uidNumber: 10089
+gidNumber: 10000
+sn: Da Silva Muniz
+givenName: Victor Hugo
+structuralObjectClass: inetOrgPerson
+entryUUID: 40a48ade-0324-103f-83a8-3d0d150d5c6d
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240909182244Z
+entryCSN: 20240909182244.600231Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240909182244Z
+
+dn: cn=Leticia Brito Samuel Luz,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/leticia.luz
+uid: leticia.luz
+cn: Leticia Brito Samuel Luz
+uidNumber: 10090
+gidNumber: 10000
+sn: Brito Samuel Luz
+givenName: Leticia
+structuralObjectClass: inetOrgPerson
+entryUUID: 51c127ec-08aa-103f-944f-e71370a44f08
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240916190501Z
+entryCSN: 20240916190501.684677Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240916190501Z
+
+dn: cn=Lucas Leal Cardoso,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/lucas.cardoso
+uid: lucas.cardoso
+cn: Lucas Leal Cardoso
+uidNumber: 10091
+gidNumber: 10000
+sn: Leal Cardoso
+givenName: Lucas
+structuralObjectClass: inetOrgPerson
+entryUUID: 9ff7ede6-08ab-103f-9450-e71370a44f08
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240916191422Z
+entryCSN: 20240916191422.402676Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240916191422Z
+
+dn: cn=Pedro Carvalho da Rocha,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/pedro.rocha
+uid: pedro.rocha
+cn: Pedro Carvalho da Rocha
+uidNumber: 10092
+gidNumber: 10000
+sn: Carvalho da Rocha
+givenName: Pedro
+structuralObjectClass: inetOrgPerson
+entryUUID: 1962acc0-08ac-103f-9451-e71370a44f08
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240916191746Z
+entryCSN: 20240916191746.106557Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240916191746Z
+
+dn:: Y249THXDrXMgUmFmYWVsIFNlbmEsb3U9UGVvcGxlLGRjPWxwcyxkYz11ZnJqLGRjPWJy
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/luis.sena
+uid: luis.sena
+cn:: THXDrXMgUmFmYWVsIFNlbmE=
+uidNumber: 10093
+gidNumber: 10000
+sn: Sena
+givenName:: THXDrXMgUmFmYWVs
+structuralObjectClass: inetOrgPerson
+entryUUID: 027742bc-0e21-103f-9452-e71370a44f08
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240923175714Z
+entryCSN: 20240923175714.585120Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240923175714Z
+
+dn: cn=Carlos Roberto Santa Brigida,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/carlos.brigida
+uid: carlos.brigida
+cn: Carlos Roberto Santa Brigida
+uidNumber: 10094
+gidNumber: 10000
+sn: Santa Brigida
+givenName: Carlos Roberto
+structuralObjectClass: inetOrgPerson
+entryUUID: 7ce08822-0edc-103f-9453-e71370a44f08
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20240924161915Z
+entryCSN: 20240924161915.845496Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20240924161915Z
+
+dn: cn=Eduardo Henrique Banaczewski,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/eduardo.banaczewski
+uid: eduardo.banaczewski
+cn: Eduardo Henrique Banaczewski
+uidNumber: 10095
+gidNumber: 10000
+sn: Banaczewski
+givenName: Eduardo Henrique
+structuralObjectClass: inetOrgPerson
+entryUUID: 8aa4850a-16b4-103f-8d44-a3e30a7d213c
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20241004155328Z
+entryCSN: 20241004155328.373325Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20241004155328Z
+
+dn:: Y249Vml0w7NyaWEgQ2Fyb2xpbmEgTWFydGlucyBGcmVpcmUsb3U9UGVvcGxlLGRjPWxwcyx
+ kYz11ZnJqLGRjPWJy
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/vitoria.freire
+uid: vitoria.freire
+cn:: Vml0w7NyaWEgQ2Fyb2xpbmEgTWFydGlucyBGcmVpcmU=
+uidNumber: 10096
+gidNumber: 10000
+sn: Martins Freire
+givenName:: Vml0w7NyaWEgQ2Fyb2xpbmE=
+structuralObjectClass: inetOrgPerson
+entryUUID: ef60be4c-1e79-103f-9e0f-d78505286015
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20241014131406Z
+entryCSN: 20241014131406.374205Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20241014131406Z
+
+dn: cn=Amanda do Carmo Silva,ou=People,dc=lps,dc=ufrj,dc=br
+objectClass: posixAccount
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+loginShell: /bin/bash
+homeDirectory: /home/amanda.silva
+uid: amanda.silva
+cn: Amanda do Carmo Silva
+uidNumber: 10097
+gidNumber: 10000
+sn: do Carmo Silva
+givenName: Amanda
+structuralObjectClass: inetOrgPerson
+entryUUID: 4c512fe6-405e-103f-9e7a-0b48ea0c97b7
+creatorsName: cn=admin,dc=lps,dc=ufrj,dc=br
+createTimestamp: 20241126162155Z
+entryCSN: 20241126162155.926358Z#000000#000#000000
+modifiersName: cn=admin,dc=lps,dc=ufrj,dc=br
+modifyTimestamp: 20241126162155Z
+
