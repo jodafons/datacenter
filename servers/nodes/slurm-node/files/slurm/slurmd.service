@@ -1,0 +1,23 @@
+[Unit]
+Description=Slurm node daemon
+#After=network.target munge.service
+After=multi-user.target
+#ConditionPathExists=/etc/slurm/slurm.conf
+StartLimitIntervalSec=30
+StartLimitBurst=10
+
+
+[Service]
+Type=forking
+EnvironmentFile=-/etc/sysconfig/slurmd
+ExecStart=/usr/sbin/slurmd -d /usr/sbin/slurmstepd $SLURMD_OPTIONS
+Restart=on-failure
+ExecReload=/bin/kill -HUP $MAINPID
+PIDFile=/var/run/slurmd.pid
+KillMode=process
+LimitNOFILE=51200
+LimitMEMLOCK=infinity
+LimitSTACK=infinity
+
+[Install]
+WantedBy=multi-user.target
