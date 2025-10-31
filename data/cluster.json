@@ -3,10 +3,6 @@
         "storage01":{
             "server":"10.1.1.202",
             "path":"/volume1/proxmox"
-        },
-        "storage02":{
-            "server":"10.1.1.203",
-            "path":"/volume1/proxmox"
         }
     },
     "cluster":{
@@ -25,8 +21,8 @@
     },
     "images":{
         "paths" : {
-            "cpu":"/mnt/pve/storage02/dump/vzdump-qemu-351-2025_09_21-21_22_25.vma.zst", 
-            "gpu":"/mnt/pve/storage02/dump/vzdump-qemu-391-2025_09_22-14_48_48.vma.zst"
+            "cpu":"/mnt/pve/storage01/dump/vzdump-qemu-500-2025_10_31-13_30_20.vma.zst", 
+            "gpu":"/mnt/pve/storage01/dump/vzdump-qemu-391-2025_09_22-14_48_48.vma.zst"
         },
         "hostname": "slurm-node"
     },
@@ -39,7 +35,7 @@
                 "sockets"   : 2,
                 "cores"     : 20,
                 "memory_mb" : 128000,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba51",
                 "image"     : "cpu",
                 "pci"       : ""
@@ -51,7 +47,7 @@
                 "sockets"   : 2,
                 "cores"     : 20,
                 "memory_mb" : 128000,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba52",
                 "image"     : "cpu",
                 "pci"       : ""
@@ -64,7 +60,7 @@
                 "sockets"   : 2,
                 "cores"     : 20,
                 "memory_mb" : 128000,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba53",
                 "image"     : "cpu",
                 "pci"       : ""
@@ -77,7 +73,7 @@
                 "sockets"   : 2,
                 "cores"     : 24,
                 "memory_mb" : 128000,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba54",
                 "image"     : "cpu",
                 "pci"       : ""
@@ -89,7 +85,7 @@
                 "sockets"   : 1,
                 "cores"     : 10,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba71",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
@@ -102,7 +98,7 @@
                 "sockets"   : 1,
                 "cores"     : 10,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba72",
                 "image"     : "gpu",
                 "pci"       : "0000:03:00"
@@ -115,7 +111,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba73",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
@@ -127,7 +123,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba74",
                 "image"     : "gpu",
                 "pci"       : "0000:03:00"
@@ -139,7 +135,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba75",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
@@ -151,7 +147,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba76",
                 "image"     : "gpu",
                 "pci"       : "0000:03:00"
@@ -163,7 +159,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba77",
                 "image"     : "gpu",
                 "pci"       : ""
@@ -175,7 +171,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba78",
                 "image"     : "gpu",
                 "pci"       : "0000:03:00"
@@ -187,7 +183,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba79",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
@@ -199,7 +195,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba80",
                 "image"     : "gpu",
                 "pci"       : "0000:03:00"
@@ -211,7 +207,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 20480,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba91",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
@@ -223,7 +219,7 @@
                 "sockets"   : 1,
                 "cores"     : 8,
                 "memory_mb" : 20480,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba92",
                 "image"     : "gpu",
                 "pci"       : "0000:02:00"
@@ -235,7 +231,7 @@
                 "sockets"   : 1,
                 "cores"     : 10,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba93",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
@@ -247,7 +243,7 @@
                 "sockets"   : 1,
                 "cores"     : 10,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba94",
                 "image"     : "gpu",
                 "pci"       : "0000:05:00"
@@ -259,7 +255,7 @@
                 "sockets"   : 1,
                 "cores"     : 10,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba95",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
@@ -271,7 +267,7 @@
                 "sockets"   : 1,
                 "cores"     : 10,
                 "memory_mb" : 30720,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba96",
                 "image"     : "gpu",
                 "pci"       : "0000:05:00"
@@ -283,7 +279,7 @@
                 "sockets"   : 1,
                 "cores"     : 12,
                 "memory_mb" : 61440,
-                "storage"   : "storage02",
+                "storage"   : "storage01",
                 "vm_name"    : "caloba97",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"

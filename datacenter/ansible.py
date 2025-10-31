@@ -61,8 +61,21 @@ class Playbook:
         self.envs      = envs
 
     def ping_hosts(self, hosts : str ):
-        command = f"{self.__preexec} && ansible {hosts} -m ping -v -i {get_host_path()}"
-        os.system(command)
+        preexec = " && ".join([f"export {key}={value}" for key, value in self.envs.items()])
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+                print(f"Temporary directory created at: {temp_dir}")
+                # Define the path for the file within the temporary directory
+                file_path = os.path.join(temp_dir, "hosts")
+
+                with open(file_path, 'w') as f:
+                    with open(self.host_path, mode='r') as f_original:
+                        for line in f_original.readlines():
+                            f.write(line.replace("$CLUSTER_MASTER_KEY", get_master_key()) )
+                    print(f.name)
+                
+                command = f'{preexec} && ansible {hosts} -m ping -v -i {file_path}'
+                os.system(command)
 
     def run_shell(self, 
                   hosts       : str, 

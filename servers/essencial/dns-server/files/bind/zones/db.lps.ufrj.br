@@ -78,7 +78,6 @@ service03                   IN    A     146.164.147.103 ; service virtualization
 
 
 
-
 ; hosted into service 01
 auth-server                 IN    A     146.164.147.3   ; kerberos and ldap
 slurm-server                IN    A     146.164.147.4   ; slurm frontend
