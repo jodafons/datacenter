@@ -16,18 +16,6 @@ apt install -y net-tools rsync screen fpart htop
 #
 apt-get update --fix-missing
 apt install -y resolvconf
-apt install -y nfs-common
-
-
-#
-# NFS
-#
-mkdir -p /mnt/market_place
-mkdir -p /mnt/shared/storage03/volumes
-
-echo "10.1.1.202:/volume1/market_place /mnt/market_place nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-echo "10.1.1.204:/shares/volumes /mnt/shared/storage03/volumes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-
 
 
 
