@@ -1,6 +1,6 @@
 
 
-address=146.164.147.49
+address=146.164.147.42
 network_interface=$(ip link | awk -F: '$0 !~ "lo|vir|wl|^[^0-9]"{print $2;getline}')
 
 
@@ -23,14 +23,10 @@ apt install -y nfs-common
 # NFS
 #
 mkdir -p /mnt/market_place
-#mkdir -p /mnt/shared/storage01/homes
-#mkdir -p /mnt/shared/storage02/homes
-mkdir -p /mnt/shared/storage02/volumes
+mkdir -p /mnt/shared/storage03/volumes
 
 echo "10.1.1.202:/volume1/market_place /mnt/market_place nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-#echo "10.1.1.203:/volume1/projects /mnt/shared/storage02/projects nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-#echo "10.1.1.203:/volume1/homes_data /mnt/shared/storage02/homes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-echo "10.1.1.203:/volume1/volumes /mnt/shared/storage02/volumes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
+echo "10.1.1.204:/shares/volumes /mnt/shared/storage03/volumes nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
 
 
 
