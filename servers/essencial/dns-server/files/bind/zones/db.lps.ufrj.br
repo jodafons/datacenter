@@ -3,7 +3,7 @@
 ;
 $TTL      7200
 @     IN   SOA       ns.lps.ufrj.br. netadmin.lps.ufrj.br. (
-           2025092200    ; Serial (YOU NEED TO CHANGE THIS EVERY UPDATE)
+           2025110300    ; Serial (YOU NEED TO CHANGE THIS EVERY UPDATE)
            7200          ; Refresh (2h)
            3600          ; Retry (1h)
            31536000      ; Expire (1y)
@@ -78,25 +78,21 @@ service03                   IN    A     146.164.147.103 ; service virtualization
 
 
 
+
 ; hosted into service 01
 auth-server                 IN    A     146.164.147.3   ; kerberos and ldap
 slurm-server                IN    A     146.164.147.4   ; slurm frontend
 login-server                IN    A     146.164.147.5   ; login
 vpn-server                  IN    A     146.164.147.6   ; openvpn
-copy-server                 IN    A     146.164.147.7   ; openvpn
-
+proxy-server                IN    A     146.164.147.7   ; nginx proxy server
+www-server                  IN    A     146.164.147.8   ; sites
 
 ; hosted into service02
-proxy-server                IN    A     146.164.147.40  ; nginx proxy server
-www-server                  IN    A     146.164.147.41  ; sites
-dorothy-server              IN    A     146.164.147.42  ; brics server 
-runner-server               IN    A     146.164.147.43  ; github self-runner
-postgres-server             IN    A     146.164.147.44  ; postgres
-mlflow-server               IN    A     146.164.147.45  ; mlflow
-maestro-server              IN    A     146.164.147.46  ;
-cad-server                  IN    A     146.164.147.47  ; 
-docker-server               IN    A     146.164.147.48  ; 
-indico-server               IN    A     146.164.147.49  ; 
+postgres-server             IN    A     146.164.147.41  ; postgres
+docker-server               IN    A     146.164.147.42  ; 
+
+; hosted into service03
+text-inference-server       IN    A     146.164.147.49  ; llm models
 
 www                         IN    CNAME proxy-server.lps.ufrj.br.
 paf                         IN    CNAME proxy-server.lps.ufrj.br.
@@ -107,7 +103,6 @@ dorothy-image               IN    CNAME proxy-server.lps.ufrj.br.
 pgadmin                     IN    CNAME proxy-server.lps.ufrj.br.
 cad                         IN    CNAME proxy-server.lps.ufrj.br.
 idcs                        IN    CNAME proxy-server.lps.ufrj.br.
-indico                      IN    CNAME proxy-server.lps.ufrj.br.
 
 
 

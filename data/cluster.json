@@ -21,8 +21,8 @@
     },
     "images":{
         "paths" : {
-            "cpu":"/mnt/pve/storage01/dump/vzdump-qemu-500-2025_10_31-13_30_20.vma.zst", 
-            "gpu":"/mnt/pve/storage01/dump/vzdump-qemu-391-2025_09_22-14_48_48.vma.zst"
+            "cpu":"/mnt/pve/storage01/dump/vzdump-qemu-501-2025_11_02-11_05_08.vma.zst", 
+            "gpu":"/mnt/pve/storage01/dump/vzdump-qemu-501-2025_11_02-19_45_52.vma.zst"
         },
         "hostname": "slurm-node"
     },

@@ -63,8 +63,9 @@ class VM(Playbook):
         vm_name    = self.vm("vm_name") 
 
         command = Command("restore vm...")
+        #command+= f"pvesm set {storage} --format qcow2"
         command+= f"qmrestore {image} {vmid} --storage {storage} --unique --force"
-        command+= f"qm set {vmid} --name {vm_name} --sockets {sockets} --cores {cores} --memory {memory_mb}"
+        command+= f"qm set {vmid} --name {vm_name} --sockets {sockets} --cores {cores} --memory {memory_mb} --cpu host"
         command+= f"qm start {vmid}"
         return self.run_shell_on_host(command)
     

@@ -75,6 +75,7 @@ class Cluster(Playbook):
         print(f"create cluster into the host {cluster_master_host} for cluster {self.cluster_name}")
         command = Command("create cluster...")
         command+= f"pvecm create {self.cluster_name} --votes 1"
+        #command+= f"pvesm set storage01 --format qcow2"
         return self.run_shell_on_master_host(command)
 
 

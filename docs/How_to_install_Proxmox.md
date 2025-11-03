@@ -183,6 +183,15 @@ To add an NFS storage share to your cluster, follow these steps:
       * **Content**: Select **Disk**, **ISO**, **backup**, and **snipped**.
 4.  Click **Add** to make the storage available to the entire cluster.
 
+
+## Snapshot not supported error in NFS storage:
+
+To fixed it, access one proxmox node and type:
+
+```
+pvesm set <STORAGE_ID> --format qcow2
+```
+
 -----
 
 # LPS adminstrator page:

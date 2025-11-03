@@ -3,7 +3,7 @@
 ;
 $TTL  7200
 @ IN  SOA ns.lps.ufrj.br. netadmin.lps.ufrj.br. (
-      2025092200  ; Serial
+      2025110300  ; Serial
       7200        ; Refresh (2h)
       3600        ; Retry (1h)
       31536000    ; Expire (1y)
@@ -17,7 +17,7 @@ $TTL  7200
 ; SLURM new stuff
 ;
 
-; CPU smalll
+; CPU small
 12  IN  PTR caloba12.lps.ufrj.br.
 13  IN  PTR caloba13.lps.ufrj.br.
 14  IN  PTR caloba14.lps.ufrj.br.
