@@ -104,7 +104,7 @@
                 "pci"       : "0000:03:00"
 
             },
-            "caloba753":{
+            "caloba73":{
                 "host"      : "caloba-v03",
                 "ip_address": "10.1.1.73",
                 "vmid"      : 373,

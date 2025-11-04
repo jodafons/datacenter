@@ -1,4 +1,10 @@
 
+address=146.164.147.41
+network_interface=$(ip link | awk -F: '$0 !~ "lo|vir|wl|^[^0-9]"{print $2;getline}')
+
+
+
+
 # get name with ifconfig 
 #device=$1
 usermod -aG sudo cluster
@@ -22,25 +28,23 @@ source /etc/network/interfaces.d/*
 auto lo
 iface lo inet loopback
 
-auto ens18
-iface ens18 inet static
-  address 146.164.147.5
+auto $network_interface
+iface $network_interface inet static
+  address $address
   netmask 255.255.255.0
   gateway 146.164.147.1
   dns-nameservers 146.164.147.2 8.8.8.8 8.8.8.4
 " > /etc/network/interfaces
-
-#sudo mv 00-installer-config.yaml /etc/netplan 
-#netplan apply
 systemctl restart networking
 ifconfig
 
 
 # setup NFS
 apt install -y nfs-common
-mkdir /mnt/market_place
+mkdir -p /mnt/market_place
+mkdir -p /mnt/shared/storage03/projects
 echo "10.1.1.202:/volume1/market_place /mnt/market_place nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
-
+echo "10.1.1.204:/shares/projects /mnt/shared/storage03/projects nfs rsize=32768,wsize=32768,bg,sync,nolock 0 0" >> /etc/fstab
 
 
 #sudo reboot now
