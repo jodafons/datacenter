@@ -41,6 +41,7 @@ sudo cp /etc/munge/munge.key /mnt/market_place/slurm_build
 #systemctl enable slurm-web-gateway.service
 #systemctl start slurm-web-agent.service
 #systemctl start slurm-web-gateway.service
+
 sudo scontrol reconfigure
 
 #systemctl status slurmctld

@@ -1,6 +1,6 @@
 Types: deb
 URIs: https://pkgs.rackslab.io/deb
-Suites: sid
-Components: main
+Suites: bookworm
+Components: main slurmweb-5
 Architectures: amd64
 Signed-By: /usr/share/keyrings/rackslab.gpg
