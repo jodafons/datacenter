@@ -101,7 +101,7 @@
                 "storage"   : "storage01",
                 "vm_name"    : "caloba72",
                 "image"     : "gpu",
-                "pci"       : "0000:03:00"
+                "pci"       : "0000:05:00"
 
             },
             "caloba73":{

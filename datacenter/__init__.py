@@ -36,3 +36,7 @@ from .ansible import *
 from . import proxmox
 __all__.extend( proxmox.__all__ )
 from .proxmox import *
+
+from . import slurm 
+__all__.extend( slurm.__all__ )
+from .slurm import *

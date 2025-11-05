@@ -33,7 +33,7 @@ class Cluster(Playbook):
 
 
     def run_shell_on_all(self, 
-                         command:str
+                         command : Command
                          ) -> bool:
         return self.run_shell(self.cluster_name, command)
     

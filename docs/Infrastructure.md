@@ -46,6 +46,7 @@ server (service) into the lab infrastructure.
 - [pgadmin](http://pgadmin.lps.ufrj.br)
 - [minio](http://mlflow-server.lps.ufrj.br:9001)
 - [mlflow](http://mlflow-server.lps.ufrj.br:5000)
+- [microtick](146.164.147.1)
 
 
 ## Networks:
@@ -97,6 +98,10 @@ Is responsible to hold all proxmox backup staff. Is physically located at `10.1.
 ## Backup Storage
 
 Not available yet
+
+## Microtick:
+
+Go to IP/Firewall to configure the exposed IPs and gates.
 
 ## Links and accounts (restrict access):
 

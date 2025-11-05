@@ -5,7 +5,7 @@ slurm-node ansible_host=10.1.1.210 ansible_user=cluster ansible_password=$CLUSTE
 slurm-server ansible_host=146.164.147.4 ansible_user=cluster ansible_password=$CLUSTER_MASTER_KEY
 
 [login]
-login-server ansible_host=146.164.147.5 ansible_user=cluster ansible_password=$CLUSTER_MASTER_KEY
+login-server ansible_host=146.164.147.41 ansible_user=cluster ansible_password=$CLUSTER_MASTER_KEY
 
 
 [gpu]
