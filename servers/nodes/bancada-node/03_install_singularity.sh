@@ -42,3 +42,4 @@ singularity --version
 
 cd $basepath
 
+python /mnt/market_place/scripts/datacenter/data/scripts/configure_singularity.py

@@ -44,3 +44,10 @@ play vm destroy -n caloba51
 ```
 play vm run -c "sudo apt install -y new_package && source /mnt/market_place/scripts/install_root.sh" -n caloba[51-54]
 ```
+
+### Update singularity fake roots:
+
+```
+play vm run -c "python /mnt/market_place/scripts/datacenter/data/scripts/configure_singularity.py" -n caloba[51-54]
+```
+
