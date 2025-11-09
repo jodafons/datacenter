@@ -168,3 +168,10 @@ def vm_ping_parser():
   parser = argparse.ArgumentParser(description = '', add_help = False,  formatter_class=get_argparser_formatter())
   return [common_parser(),parser] 
 
+def vm_run_command_parser():
+  parser = argparse.ArgumentParser(description = '', add_help = False,  formatter_class=get_argparser_formatter())
+  parser.add_argument('-c','--command', action='store', dest='command', required = True, 
+                      help = "Run the command, in line")
+  return [common_parser(),parser] 
+  
+    

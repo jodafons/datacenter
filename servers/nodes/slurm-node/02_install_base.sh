@@ -68,5 +68,9 @@ echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> /etc/bash.bashrc
 echo 'eval "$(pyenv init --path)"' >> /etc/bash.bashrc
 
 
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh -b -p /opt/miniconda3
+chmod -R a+rX /opt/miniconda3
+
 
 reboot now

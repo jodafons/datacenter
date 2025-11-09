@@ -206,7 +206,7 @@
                 "vmid"      : 391,
                 "sockets"   : 1,
                 "cores"     : 8,
-                "memory_mb" : 20480,
+                "memory_mb" : 30720,
                 "storage"   : "storage01",
                 "vm_name"    : "caloba91",
                 "image"     : "gpu",
@@ -218,7 +218,7 @@
                 "vmid"      : 392,
                 "sockets"   : 1,
                 "cores"     : 8,
-                "memory_mb" : 20480,
+                "memory_mb" : 30720,
                 "storage"   : "storage01",
                 "vm_name"    : "caloba92",
                 "image"     : "gpu",
@@ -249,38 +249,14 @@
                 "pci"       : "0000:05:00"
             },
             "caloba95":{
-                "host"      : "caloba-v10",
+                "host"      : "caloba-v11",
                 "ip_address": "10.1.1.95",
                 "vmid"      : 395,
-                "sockets"   : 1,
-                "cores"     : 10,
-                "memory_mb" : 30720,
-                "storage"   : "storage01",
-                "vm_name"    : "caloba95",
-                "image"     : "gpu",
-                "pci"       : "0000:01:00"
-            },
-            "caloba96":{
-                "host"      : "caloba-v10",
-                "ip_address": "10.1.1.96",
-                "vmid"      : 396,
-                "sockets"   : 1,
-                "cores"     : 10,
-                "memory_mb" : 30720,
-                "storage"   : "storage01",
-                "vm_name"    : "caloba96",
-                "image"     : "gpu",
-                "pci"       : "0000:05:00"
-            },
-            "caloba97":{
-                "host"      : "caloba-v11",
-                "ip_address": "10.1.1.97",
-                "vmid"      : 397,
                 "sockets"   : 1,
                 "cores"     : 12,
                 "memory_mb" : 61440,
                 "storage"   : "storage01",
-                "vm_name"    : "caloba97",
+                "vm_name"    : "caloba95",
                 "image"     : "gpu",
                 "pci"       : "0000:01:00"
             }

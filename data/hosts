@@ -18,7 +18,7 @@ caloba-v05 ansible_host=10.1.1.105 ansible_user=root ansible_password=$CLUSTER_M
 [gpu-large]
 caloba-v08 ansible_host=10.1.1.108 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
 caloba-v09 ansible_host=10.1.1.109 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
-caloba-v10 ansible_host=10.1.1.110 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
+#caloba-v10 ansible_host=10.1.1.110 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
 caloba-v11 ansible_host=10.1.1.111 ansible_user=root ansible_password=$CLUSTER_MASTER_KEY
 
 [cpu-large]

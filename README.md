@@ -17,17 +17,30 @@ This repository contains all scripts and topology of the Caloba cluster. The Cal
 
 ### Recreate the cluster
 
+```
 play cluster create -n cpu-large
+```
 
 ### Reboot all physical nodels
 
+```
 play cluster reboot -n cpu-large
+```
 
 ### Restore a node into the cluster:
 
+```
 play vm create -n caloba51
+```
 
 ### Destroy a node into the cluster:
 
+```
 play vm destroy -n caloba51
+```
 
+### Install a package into a nodes:
+
+```
+play vm run -c "sudo apt install -y new_package && source /mnt/market_place/scripts/install_root.sh" -n caloba[51-54]
+```
